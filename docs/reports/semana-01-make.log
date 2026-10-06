@@ -1,0 +1,89 @@
+                         Chronologic VCS (TM)
+       Version X-2025.06-SP2_Full64 -- Tue Oct  6 18:22:04 2026
+
+                    Copyright (c) 1991 - 2025 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file 'rtl/dummy.sv'
+Parsing design file 'tb/dummy_tb.sv'
+
+Lint-[NS] Null statement
+tb/dummy_tb.sv, 33
+  Null statement is used in following verilog source.
+  Source info:         #20;
+
+Top Level Modules:
+       tb_dummy
+TimeScale is 1 ns / 1 ps
+Starting vcs inline pass...
+1 module and 0 UDP read.
+recompiling module tb_dummy
+make[1]: Entering directory '/home/luis.coutinho/Downloads/aes-spi-accelerator-6-out/csrc'
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x ../simv ]; then chmod a-x ../simv; fi
+g++  -o ../simv      -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir -Wl,-rpath=/Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib -L/Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib  -Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o   _174071_archive_1.so   SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o            -lvirsim -lerrorinf -lsnpsmalloc -lvfs      -lvcsnew -ldistsimclient -lsimprofile -luclinative /Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib/vcs_tls.o   -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive          /Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib/vcs_save_restore_new.o -ldl  -lc -lm -lpthread -ldl 
+../simv up to date
+make[1]: Leaving directory '/home/luis.coutinho/Downloads/aes-spi-accelerator-6-out/csrc'
+CPU time: .564 seconds to compile + .323 seconds to elab + .524 seconds to link
+                         Chronologic VCS (TM)
+       Version X-2025.06-SP2_Full64 -- Tue Oct  6 18:22:07 2026
+
+                    Copyright (c) 1991 - 2025 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file 'rtl/dummy.sv'
+Parsing design file 'tb/dummy_tb.sv'
+Top Level Modules:
+       tb_dummy
+TimeScale is 1 ns / 1 ps
+Starting vcs inline pass...
+1 module and 0 UDP read.
+recompiling module tb_dummy
+make[1]: Entering directory '/home/luis.coutinho/Downloads/aes-spi-accelerator-6-out/csrc'
+make[1]: Leaving directory '/home/luis.coutinho/Downloads/aes-spi-accelerator-6-out/csrc'
+make[1]: Entering directory '/home/luis.coutinho/Downloads/aes-spi-accelerator-6-out/csrc'
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x ../sim/simv ]; then chmod a-x ../sim/simv; fi
+g++  -o ../sim/simv      -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir -Wl,-rpath=/Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib -L/Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib  -Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o   _174660_archive_1.so   SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o            -lvirsim -lerrorinf -lsnpsmalloc -lvfs      -lvcsnew -ldistsimclient -lsimprofile -luclinative /Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib/vcs_tls.o   -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive        _vcs_pli_stub_.o   /Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib/vcs_save_restore_new.o /Tools/synopsys/verdi/X-2025.06-SP2/share/PLI/VCS/LINUX64/pli.a -ldl  -lc -lm -lpthread -ldl 
+../sim/simv up to date
+make[1]: Leaving directory '/home/luis.coutinho/Downloads/aes-spi-accelerator-6-out/csrc'
+CPU time: .853 seconds to compile + .559 seconds to elab + .615 seconds to link
+Verdi KDB elaboration done and the database successfully generated
+Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
+Please use '-no_save' simv switch to avoid re-execution or '-suppress=ASLR_DETECTED_INFO' to suppress this message.
+Chronologic VCS simulator copyright 1991-2025
+Contains Synopsys proprietary information.
+Compiler version X-2025.06-SP2_Full64; Runtime version X-2025.06-SP2_Full64;  Oct  6 18:22 2026
+Simulacao executada com sucesso
+$finish called from file "tb/dummy_tb.sv", line 35.
+$finish at simulation time                65000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 65000 ps
+CPU Time:      0.410 seconds;       Data structure size:   0.0Mb
+Tue Oct  6 18:22:10 2026
