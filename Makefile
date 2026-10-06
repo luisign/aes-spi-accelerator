@@ -17,10 +17,9 @@ VCS_FLAGS = -full64 -sverilog -kdb -debug_access+all -f $(FILELIST) -l $(SIM_DIR
 all: lint sim
 
 #Target para checagem de sintaxe e linting:
-#Usa +lint=all e -elab:
 lint:
 	@mkdir -p $(SIM_DIR)
-	@$(SNPS_ENV) && $(VCS) -full64 -sverilog +lint=all -elab -f $(FILELIST) -l $(SIM_DIR)/lint.log
+	@$(SNPS_ENV) && $(VCS) -full64 -sverilog +lint=all -f $(FILELIST) -l $(SIM_DIR)/lint.log
 
 #Target para compilacao:
 compile:
