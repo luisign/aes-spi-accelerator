@@ -26,14 +26,14 @@ Folders that are still empty are kept with a `.gitkeep` file and will be populat
 
 ## Requirements
 
-- Synopsys VCS (compilation, lint and simulation)
-- Synopsys environment script
+- Synopsys VCS (compilation, lint and simulation);
+- Synopsys environment script.
 
 ## Documentation
 
-- Functional specification: [`docs/spec/`](docs/spec/)
-- Architecture: [`docs/architecture/`](docs/architecture/)
-- Weekly reports: [`docs/reports/`](docs/reports/)
+- Functional specification: [`docs/spec/`](docs/spec/);
+- Architecture: [`docs/architecture/`](docs/architecture/);
+- Weekly reports: [`docs/reports/`](docs/reports/).
 
 ## Project management
 
