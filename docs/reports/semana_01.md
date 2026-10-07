@@ -33,7 +33,7 @@ Após a criação da matriz 4x4, cada rodada do algoritmo AES aplica as seguinte
 
 * **SubBytes (substituição de bytes):** substitui cada byte da matriz por outro usando uma tabela de troca pública chamada “S-Box”, da norma FIPS-197;
 * **ShiftRows (deslocamento de linhas):** desloca as linhas da matriz para a esquerda de forma circular. Então, linha 0 desloca 0 posições para a esquerda, linha 1 desloca 1 posição para a esquerda, linha 2 desloca 2 posições para a esquerda e linha 3 desloca 3 posições para a esquerda;
-* **MixColumns (mistura de colunas):** multiplica cada coluna da matriz de dados isoladamente por uma matriz fixa usando matemática de campos finitos ou Galois field (especificamente GF(2^8)), onde cada byte da nova coluna depende dos 4 bytes da coluna antiga. Se mudar uma letra do texto original, o MixColumns faz com que os 4 bytes da coluna desta letra mudem também. Isso impede que alguém tente adivinhar o texto por partes.
+* **MixColumns (mistura de colunas):** multiplica cada coluna da matriz de dados isoladamente por uma matriz fixa usando matemática de campos finitos ou Galois field (especificamente GF(2⁸)), onde cada byte da nova coluna depende dos 4 bytes da coluna antiga. Se mudar uma letra do texto original, o MixColumns faz com que os 4 bytes da coluna desta letra mudem também. Isso impede que alguém tente adivinhar o texto por partes.
 * **AddRoundKey (aplicação da chave simétrica/subchaves):** combina a matriz resultante da última operação com uma subchave única de rodada usando a operação lógica XOR. A subchave é derivada da chave simétrica principal. A cada rodada, é utilizada uma subchave diferente.
 
 ### 2.4. Níveis de segurança e fluxo das rodadas
