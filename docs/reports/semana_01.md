@@ -55,7 +55,7 @@ Além disso, o protocolo SPI possui uma regra de comando e fluxo de dados entre 
 
 O SPI geralmente utiliza 4 linhas de sinal, a seguir:
 
-* *SS (_slave select_):* utiliza-se para indicar qual dispositivo “escravo” os dados vão ser enviados ou de qual dispositivo os dados vão ser lidos;
+* **SS (_slave select_):** utiliza-se para indicar qual dispositivo “escravo” os dados vão ser enviados ou de qual dispositivo os dados vão ser lidos;
 * **MOSI (_master output/slave input_):** entrada de dados para o dispositivo “escravo”;
 * **MISO (_master input/slave output_):** saída de dados para o dispositivo “escravo”;
 * **SCLK (_serial clock_):** sinal de _clock_, gerado pelo hardware mestre.
