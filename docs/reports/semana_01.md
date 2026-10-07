@@ -33,7 +33,7 @@ Após a criação da matriz 4x4, cada rodada do algoritmo AES aplica as seguinte
 
 * **SubBytes (substituição de bytes):** substitui cada byte da matriz por outro usando uma tabela de troca pública chamada “S-Box”, da norma FIPS-197;
 * **ShiftRows (deslocamento de linhas):** desloca as linhas da matriz para a esquerda de forma circular. Então, linha 0 desloca 0 posições para a esquerda, linha 1 desloca 1 posição para a esquerda, linha 2 desloca 2 posições para a esquerda e linha 3 desloca 3 posições para a esquerda;
-* **MixColumns (mistura de colunas):** multiplica cada coluna da matriz de dados isoladamente por uma matriz fixa usando matemática de campos finitos ou Galois field (especificamente GF(2⁸)), onde cada byte da nova coluna depende dos 4 bytes da coluna antiga. Se mudar uma letra do texto original, o MixColumns faz com que os 4 bytes da coluna desta letra mudem também. Isso impede que alguém tente adivinhar o texto por partes.
+* **MixColumns (mistura de colunas):** multiplica cada coluna da matriz de dados isoladamente por uma matriz fixa usando matemática de campos finitos ou Galois field (especificamente GF(2⁸)), onde cada byte da nova coluna depende dos 4 bytes da coluna antiga. Se mudar uma letra do texto original, o MixColumns faz com que os 4 bytes da coluna desta letra mudem também. Isso impede que alguém tente adivinhar o texto por partes;
 * **AddRoundKey (aplicação da chave simétrica/subchaves):** combina a matriz resultante da última operação com uma subchave única de rodada usando a operação lógica XOR. A subchave é derivada da chave simétrica principal. A cada rodada, é utilizada uma subchave diferente.
 
 ### 2.4. Níveis de segurança e fluxo das rodadas
@@ -47,3 +47,15 @@ O número de repetições (rodadas) do ciclo depende do tamanho da chave escolhi
 | AES-256 | 256 bits (32 bytes) | 15 subchaves | 14 rodadas |
 
 ## 3. Estudo do protocolo SPI
+
+O SPI (_Serial Peripheral Interface_) é um protocolo de transmissão de dados rápida e bastante utilizado em microcontroladores e outros dispositivos. É síncrono (possui sinal de _clock_).
+Além disso, o protocolo SPI possui uma regra de comando e fluxo de dados entre um hardware controlador (chamado de mestre ou _master_) e um ou mais hardware que são periféricos (chamados de escravos ou _slaves_). O hardware mestre comanda a comunicação e gera o sinal de _clock_, e o hardware escravo envia ou recebe dados de acordo com o hardware mestre.
+
+### 3.1. Linhas do protocolo SPI
+
+O SPI geralmente utiliza 4 linhas de sinal, a seguir:
+
+* *SS (_slave select_):* utiliza-se para indicar qual dispositivo “escravo” os dados vão ser enviados ou de qual dispositivo os dados vão ser lidos;
+* **MOSI (_master output/slave input_):** entrada de dados para o dispositivo “escravo”;
+* **MISO (_master input/slave output_):** saída de dados para o dispositivo “escravo”;
+* **SCLK (_serial clock_):** sinal de _clock_, gerado pelo hardware mestre.
