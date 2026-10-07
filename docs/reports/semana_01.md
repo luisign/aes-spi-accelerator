@@ -23,3 +23,27 @@ Matriz de Estado (4x4):
 [ i ]  [ g ]  [ i ]  [ S ]   <- Linha 2 (bytes 2, 6, 10, 14)
 [ p ]  [ r ]  [ a ]  [ ! ]   <- Linha 3 (bytes 3, 7, 11, 15)
 ```
+#### 2.2.2. Regra de preenchimento PKCS#7 (PKCS#7 _padding_)
+
+Se o texto ou dado original não for múltiplo de 16 bytes, o PKCS#7 _padding_ adiciona bytes para preencher o bloco de 16 bytes. O valor do byte adicionado é igual à quantidade de bytes faltantes. Ou seja, se faltarem 9 bytes, essa regra de preenchimento adiciona 9 bytes de valor hexadecimal `0x09`. Na descriptografia, é lido o último byte e removido o preenchimento descartando a quantidade indicada por esse valor.
+
+### 2.3. As 4 etapas da criptografia AES
+
+Após a criação da matriz 4x4, cada rodada do algoritmo AES aplica as seguintes transformações matemáticas sobre a matriz de dados, em sequência:
+
+* **SubBytes (substituição de bytes):** substitui cada byte da matriz por outro usando uma tabela de troca pública chamada “S-Box”, da norma FIPS-197;
+* **ShiftRows (deslocamento de linhas):** desloca as linhas da matriz para a esquerda de forma circular. Então, linha 0 desloca 0 posições para a esquerda, linha 1 desloca 1 posição para a esquerda, linha 2 desloca 2 posições para a esquerda e linha 3 desloca 3 posições para a esquerda;
+* **MixColumns (mistura de colunas):** multiplica cada coluna da matriz de dados isoladamente por uma matriz fixa usando matemática de campos finitos ou Galois field (especificamente GF(2^8)), onde cada byte da nova coluna depende dos 4 bytes da coluna antiga. Se mudar uma letra do texto original, o MixColumns faz com que os 4 bytes da coluna desta letra mudem também. Isso impede que alguém tente adivinhar o texto por partes.
+* **AddRoundKey (aplicação da chave simétrica/subchaves):** combina a matriz resultante da última operação com uma subchave única de rodada usando a operação lógica XOR. A subchave é derivada da chave simétrica principal. A cada rodada, é utilizada uma subchave diferente.
+
+### 2.4. Níveis de segurança e fluxo das rodadas
+
+O número de repetições (rodadas) do ciclo depende do tamanho da chave escolhida. Como visto, a criptografia AES divide o dado em blocos de 128 bits (16 bytes), e as chaves podem ser de 3 variações: 128 bits (16 bytes), 192 bits (24 bytes) e 256 bits (32 bytes). Quanto maior o tamanho da chave, maior a quantidade de subchaves geradas e rodadas. Veja a tabela:
+
+| Variação | Tamanho da chave | Subchaves geradas | Rodadas |
+| :---: | :---: | :---: | :---: |
+| AES-128 | 128 bits (16 bytes) | 11 subchaves | 10 rodadas |
+| AES-192 | 192 bits (24 bytes) | 13 subchaves | 12 rodadas |
+| AES-256 | 256 bits (32 bytes) | 15 subchaves | 14 rodadas |
+
+## 3. Estudo do protocolo SPI
