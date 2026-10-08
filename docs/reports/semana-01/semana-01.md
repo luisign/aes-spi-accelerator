@@ -85,7 +85,7 @@ A combinação dos níveis lógicos de `CPOL` e `CPHA` resulta em 4 modos de ope
 
 ## 4. Arquitetura do sistema de topo (AES _top-level system_)
 
-![Diagrama de blocos da arquitetura do sistema de topo](semana-01/aes-top-level-system.png "Diagrama de blocos da arquitetura do sistema de topo")
+![Diagrama de blocos da arquitetura do sistema de topo](aes-top-level-system.png "Diagrama de blocos da arquitetura do sistema de topo")
 
 ## 5. Ambiente e fluxo mínimo
 
