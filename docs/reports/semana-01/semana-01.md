@@ -33,8 +33,8 @@ Após a criação da matriz 4x4, cada rodada do algoritmo AES aplica as seguinte
 
 * **SubBytes (substituição de bytes):** substitui cada byte da matriz por outro usando uma tabela de troca pública chamada “S-Box”, da norma FIPS-197;
 * **ShiftRows (deslocamento de linhas):** desloca as linhas da matriz para a esquerda de forma circular. Então, linha 0 desloca 0 posições para a esquerda, linha 1 desloca 1 posição para a esquerda, linha 2 desloca 2 posições para a esquerda e linha 3 desloca 3 posições para a esquerda;
-* **MixColumns (mistura de colunas):** multiplica cada coluna da matriz de dados isoladamente por uma matriz fixa usando matemática de campos finitos ou Galois _field_ (especificamente GF(2⁸)), onde cada byte da nova coluna depende dos 4 bytes da coluna antiga. Se mudar uma letra do texto original, o MixColumns faz com que os 4 bytes da coluna desta letra mudem também. Isso impede que alguém tente adivinhar o texto por partes;
-* **AddRoundKey (aplicação da chave simétrica/subchaves):** combina a matriz resultante da última operação com uma subchave única de rodada usando a operação lógica XOR. A subchave é derivada da chave simétrica principal. A cada rodada, é utilizada uma subchave diferente.
+* **MixColumns (mistura de colunas):** multiplica cada coluna da matriz de dados isoladamente por uma matriz fixa usando matemática de campos finitos ou Galois _field_ (especificamente GF(2⁸)), onde cada byte da nova coluna depende dos 4 bytes da coluna antiga. Se mudar uma letra do texto original, o **MixColumns** faz com que os 4 bytes da coluna desta letra mudem também. Isso impede que alguém tente adivinhar o texto por partes;
+* **AddRoundKey (aplicação da chave simétrica/subchaves):** combina a matriz resultante da última operação com uma subchave única de rodada usando a operação lógica **XOR**. A subchave é derivada da chave simétrica principal. A cada rodada, é utilizada uma subchave diferente.
 
 ### 2.4. Níveis de segurança e fluxo das rodadas
 
@@ -49,7 +49,7 @@ O número de repetições (rodadas) do ciclo depende do tamanho da chave escolhi
 ## 3. Estudo do protocolo SPI
 
 O SPI (_Serial Peripheral Interface_) é um protocolo de transmissão de dados rápida e bastante utilizado em microcontroladores e outros dispositivos. É síncrono (possui sinal de _clock_).
-Além disso, o protocolo SPI possui uma regra de comando e fluxo de dados entre um hardware controlador (chamado de "mestre" ou _master_) e um ou mais hardware que são periféricos (chamados de "escravos" ou _slaves_). O hardware "mestre" comanda a comunicação e gera o sinal de _clock_, e o hardware "escravo" envia ou recebe dados de acordo com o hardware mestre.
+Além disso, o protocolo SPI possui uma regra de comando e fluxo de dados entre um hardware controlador (chamado de "mestre" ou _master_) e um ou mais hardware que são periféricos (chamados de "escravos" ou _slaves_). O hardware "mestre" comanda a comunicação e gera o sinal de _clock_, e o hardware "escravo" envia ou recebe dados de acordo com o hardware "mestre".
 
 ### 3.1. Linhas do protocolo SPI
 
@@ -65,12 +65,12 @@ O SPI geralmente utiliza 4 linhas de sinal, a seguir:
 O comportamento do protocolo SPI é definido por dois parâmetros de configuração:
 
 1. **`CPOL` (polaridade do sinal de _clock_ ou _clock polarity_):** a polaridade define o estado de repouso da linha do sinal de _clock_ (**SCLK**) quando não há transmissão:
-   * **Se `CPOL` for igual a `0`:** O _clock_ fica em nível lógico 0 quando inativo (estado `IDLE`).
-   * **Se `CPOL` for igual a `1`:** O _clock_ fica em nível lógico 1 quando inativo (estado `IDLE`).
+   * **Se `CPOL` for igual a `0`:** o _clock_ fica em nível lógico 0 quando inativo (estado `IDLE`).
+   * **Se `CPOL` for igual a `1`:** o _clock_ fica em nível lógico 1 quando inativo (estado `IDLE`).
 
 2. **`CPHA` (fase do sinal de _clock_ ou _clock phase_):** a fase estabelece em qual borda do pulso de _clock_ os dados são amostrados (capturados):
-   * **Se `CPHA` for igual a `0`:** Os dados são capturados/amostrados na primeira borda da transição do _clock_ e trocados na segunda borda.
-   * **Se `CPHA` for igual a `1`:** Os dados são trocados na primeira borda da transição do _clock_ e capturados/amostrados na segunda borda.
+   * **Se `CPHA` for igual a `0`:** os dados são capturados/amostrados na primeira borda da transição do _clock_ e trocados na segunda borda.
+   * **Se `CPHA` for igual a `1`:** os dados são trocados na primeira borda da transição do _clock_ e capturados/amostrados na segunda borda.
 
 ### 3.3. Modos de operação do SPI
 
