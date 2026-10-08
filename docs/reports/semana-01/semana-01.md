@@ -33,7 +33,7 @@ Após a criação da matriz 4x4, cada rodada do algoritmo AES aplica as seguinte
 
 * **SubBytes (substituição de bytes):** substitui cada byte da matriz por outro usando uma tabela de troca pública chamada “S-Box”, da norma FIPS-197;
 * **ShiftRows (deslocamento de linhas):** desloca as linhas da matriz para a esquerda de forma circular. Então, linha 0 desloca 0 posições para a esquerda, linha 1 desloca 1 posição para a esquerda, linha 2 desloca 2 posições para a esquerda e linha 3 desloca 3 posições para a esquerda;
-* **MixColumns (mistura de colunas):** multiplica cada coluna da matriz de dados isoladamente por uma matriz fixa usando matemática de campos finitos ou Galois field (especificamente GF(2⁸)), onde cada byte da nova coluna depende dos 4 bytes da coluna antiga. Se mudar uma letra do texto original, o MixColumns faz com que os 4 bytes da coluna desta letra mudem também. Isso impede que alguém tente adivinhar o texto por partes;
+* **MixColumns (mistura de colunas):** multiplica cada coluna da matriz de dados isoladamente por uma matriz fixa usando matemática de campos finitos ou Galois _field_ (especificamente GF(2⁸)), onde cada byte da nova coluna depende dos 4 bytes da coluna antiga. Se mudar uma letra do texto original, o MixColumns faz com que os 4 bytes da coluna desta letra mudem também. Isso impede que alguém tente adivinhar o texto por partes;
 * **AddRoundKey (aplicação da chave simétrica/subchaves):** combina a matriz resultante da última operação com uma subchave única de rodada usando a operação lógica XOR. A subchave é derivada da chave simétrica principal. A cada rodada, é utilizada uma subchave diferente.
 
 ### 2.4. Níveis de segurança e fluxo das rodadas
@@ -85,7 +85,13 @@ A combinação dos níveis lógicos de `CPOL` e `CPHA` resulta em 4 modos de ope
 
 ## 4. Arquitetura do sistema de topo (AES _top-level system_)
 
+A seguir, o diagrama de blocos do sistema de topo:
+
 ![Diagrama de blocos da arquitetura do sistema de topo](aes-top-level-system.png "Diagrama de blocos da arquitetura do sistema de topo")
+
+No diagrama, o sistema de topo (**AES TOP-LEVEL SYSTEM**) se comunica por meio de quatro interfaces: o _reset_ global (**GLOBAL RESET**), o sinal de _clock_ vindo de um oscilador (**clk from OSC**), a interface SPI (**SPI IF**), e a interface de dados com a memória (**MEMORY DATA IF**). Além disso, ele integra seis blocos dentro dele: **RESET**, que recebe e trata do _reset_ global, o **PLL**, que recebe o sinal de _clock_ do oscilador, o **SPI**, responsável pela configuração e controle do sistema pela interface SPI, o **AES** que realiza a criptografia dos dados, o **MEMORY / DATA System**, que trata do acesso externo aos dados, e a memória em si (**MEMORY**).
+
+Nos blocos **PLL** e **MEMORY**, devem ser utilizados modelos comportamentais para simulação do sistema, para imitar o comportamento que aconteceria na realidade, possuindo subtítulos _mocked_ e _model/mock_.
 
 ## 5. Ambiente e fluxo mínimo
 
@@ -96,3 +102,9 @@ O repositório `aes-spi-accelerator` segue a estrutura sugerida pelo instrutor (
 O _backlog_ do projeto está registrado no [GitHub Project](https://github.com/users/luisign/projects/1) do repositório, organizado pelas semanas seguintes do cronograma.
 
 ## 7. Referências bibliográficas
+
+*
+*
+*
+* 
+* Especificação funcional do projeto, em `docs/spec/`.
