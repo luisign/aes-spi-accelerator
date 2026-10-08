@@ -59,3 +59,32 @@ O SPI geralmente utiliza 4 linhas de sinal, a seguir:
 * **MOSI (_master output/slave input_):** entrada de dados para o dispositivo “escravo”;
 * **MISO (_master input/slave output_):** saída de dados para o dispositivo “escravo”;
 * **SCLK (_serial clock_):** sinal de _clock_, gerado pelo hardware mestre.
+
+### 3.2. Polaridade (`CPOL`) e fase (`CPHA`) do sinal de _clock_
+
+O comportamento do protocolo SPI é definido por dois parâmetros de configuração:
+
+1. **`CPOL` (polaridade do sinal de _clock_ ou _clock polarity_):** a polaridade define o estado de repouso da linha do sinal de _clock_ (**SCLK**) quando não há transmissão:
+   * **Se `CPOL` for igual a 0:** O _clock_ fica em nível lógico 0 quando inativo (estado IDLE).
+   * **Se `CPOL` for igual a 1:** O _clock_ fica em nível lógico 1 quando inativo (estado IDLE).
+
+2. **`CPHA` (fase do sinal de _clock_ ou _clock phase_):** a fase estabelece em qual borda do pulso de _clock_ os dados são amostrados (capturados):
+   * **Se `CPHA` for igual a 0:** Os dados são capturados/amostrados na primeira borda da transição do _clock_ e trocados na segunda borda.
+   * **Se `CPHA` for igual a 1:** Os dados são trocados na primeira borda da transição do _clock_ e capturados/amostrados na segunda borda.
+
+### 3.3. Modos de operação do SPI
+
+A combinação dos níveis lógicos de `CPOL` e `CPHA` resulta em 4 modos de operação. Desses modos, o mais comum para hardware é utilizar o modo 0 ou o modo 3. Veja o comportamento dos 4 modos na tabela a seguir:
+
+| Modo de operação | `CPOL` | `CPHA` | Estado de repouso do `SCLK` | Borda de amostragem | Borda de transição |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| **Modo 0** | `0` | `0` | Baixo (`0`) | Subida (*rising edge*) | Descida (*falling edge*) |
+| **Modo 1** | `0` | `1` | Baixo (`0`) | Descida (*falling edge*) | Subida (*rising edge*) |
+| **Modo 2** | `1` | `0` | Alto (`1`) | Descida (*falling edge*) | Subida (*rising edge*) |
+| **Modo 3** | `1` | `1` | Alto (`1`) | Subida (*rising edge*) | Descida (*falling edge*) |
+
+## 4. Arquitetura do sistema de topo (AES _top-level system_)
+
+## 5. Ambiente e fluxo mínimo
+
+## 6. _Backlog_ inicial
