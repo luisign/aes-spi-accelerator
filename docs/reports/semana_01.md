@@ -23,9 +23,9 @@ Matriz de Estado (4x4):
 [ i ]  [ g ]  [ i ]  [ S ]   <- Linha 2 (bytes 2, 6, 10, 14)
 [ p ]  [ r ]  [ a ]  [ ! ]   <- Linha 3 (bytes 3, 7, 11, 15)
 ```
-#### 2.2.2. Regra de preenchimento PKCS#7 (PKCS#7 _padding_)
+#### 2.2.1. Regra de preenchimento PKCS#7 (PKCS#7 _padding_)
 
-Se o texto ou dado original não for múltiplo de 16 bytes, o PKCS#7 _padding_ adiciona bytes para preencher o bloco de 16 bytes. O valor do byte adicionado é igual à quantidade de bytes faltantes. Ou seja, se faltarem 9 bytes, essa regra de preenchimento adiciona 9 bytes de valor hexadecimal `0x09`. Na descriptografia, é lido o último byte e removido o preenchimento descartando a quantidade indicada por esse valor.
+Se o texto ou dado original não for múltiplo de 16 bytes, o PKCS#7 _padding_ adiciona bytes para preencher o bloco de 16 bytes, se isso for uma regra do sistema. O valor do byte adicionado é igual à quantidade de bytes faltantes. Ou seja, se faltarem 9 bytes, essa regra de preenchimento adiciona 9 bytes de valor hexadecimal `0x09`. Na descriptografia, é lido o último byte e removido o preenchimento descartando a quantidade indicada por esse valor.
 
 ### 2.3. As 4 etapas da criptografia AES
 
@@ -49,28 +49,28 @@ O número de repetições (rodadas) do ciclo depende do tamanho da chave escolhi
 ## 3. Estudo do protocolo SPI
 
 O SPI (_Serial Peripheral Interface_) é um protocolo de transmissão de dados rápida e bastante utilizado em microcontroladores e outros dispositivos. É síncrono (possui sinal de _clock_).
-Além disso, o protocolo SPI possui uma regra de comando e fluxo de dados entre um hardware controlador (chamado de mestre ou _master_) e um ou mais hardware que são periféricos (chamados de escravos ou _slaves_). O hardware mestre comanda a comunicação e gera o sinal de _clock_, e o hardware escravo envia ou recebe dados de acordo com o hardware mestre.
+Além disso, o protocolo SPI possui uma regra de comando e fluxo de dados entre um hardware controlador (chamado de "mestre" ou _master_) e um ou mais hardware que são periféricos (chamados de "escravos" ou _slaves_). O hardware "mestre" comanda a comunicação e gera o sinal de _clock_, e o hardware "escravo" envia ou recebe dados de acordo com o hardware mestre.
 
 ### 3.1. Linhas do protocolo SPI
 
 O SPI geralmente utiliza 4 linhas de sinal, a seguir:
 
 * **SS (_slave select_):** utiliza-se para indicar qual dispositivo “escravo” os dados vão ser enviados ou de qual dispositivo os dados vão ser lidos;
-* **MOSI (_master output/slave input_):** entrada de dados para o dispositivo “escravo”;
-* **MISO (_master input/slave output_):** saída de dados para o dispositivo “escravo”;
-* **SCLK (_serial clock_):** sinal de _clock_, gerado pelo hardware mestre.
+* **MOSI (_master output/slave input_):** saída de dados do dispositivo "mestre" e entrada de dados para o dispositivo "escravo";
+* **MISO (_master input/slave output_):** entrada de dados para o dispositivo "mestre" e saída de dados do dispositivo "escravo";
+* **SCLK (_serial clock_):** sinal de _clock_, gerado pelo hardware "mestre".
 
 ### 3.2. Polaridade (`CPOL`) e fase (`CPHA`) do sinal de _clock_
 
 O comportamento do protocolo SPI é definido por dois parâmetros de configuração:
 
 1. **`CPOL` (polaridade do sinal de _clock_ ou _clock polarity_):** a polaridade define o estado de repouso da linha do sinal de _clock_ (**SCLK**) quando não há transmissão:
-   * **Se `CPOL` for igual a 0:** O _clock_ fica em nível lógico 0 quando inativo (estado IDLE).
-   * **Se `CPOL` for igual a 1:** O _clock_ fica em nível lógico 1 quando inativo (estado IDLE).
+   * **Se `CPOL` for igual a `0`:** O _clock_ fica em nível lógico 0 quando inativo (estado `IDLE`).
+   * **Se `CPOL` for igual a `1`:** O _clock_ fica em nível lógico 1 quando inativo (estado `IDLE`).
 
 2. **`CPHA` (fase do sinal de _clock_ ou _clock phase_):** a fase estabelece em qual borda do pulso de _clock_ os dados são amostrados (capturados):
-   * **Se `CPHA` for igual a 0:** Os dados são capturados/amostrados na primeira borda da transição do _clock_ e trocados na segunda borda.
-   * **Se `CPHA` for igual a 1:** Os dados são trocados na primeira borda da transição do _clock_ e capturados/amostrados na segunda borda.
+   * **Se `CPHA` for igual a `0`:** Os dados são capturados/amostrados na primeira borda da transição do _clock_ e trocados na segunda borda.
+   * **Se `CPHA` for igual a `1`:** Os dados são trocados na primeira borda da transição do _clock_ e capturados/amostrados na segunda borda.
 
 ### 3.3. Modos de operação do SPI
 
@@ -78,13 +78,21 @@ A combinação dos níveis lógicos de `CPOL` e `CPHA` resulta em 4 modos de ope
 
 | Modo de operação | `CPOL` | `CPHA` | Estado de repouso do `SCLK` | Borda de amostragem | Borda de transição |
 | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Modo 0** | `0` | `0` | Baixo (`0`) | Subida (*rising edge*) | Descida (*falling edge*) |
-| **Modo 1** | `0` | `1` | Baixo (`0`) | Descida (*falling edge*) | Subida (*rising edge*) |
-| **Modo 2** | `1` | `0` | Alto (`1`) | Descida (*falling edge*) | Subida (*rising edge*) |
-| **Modo 3** | `1` | `1` | Alto (`1`) | Subida (*rising edge*) | Descida (*falling edge*) |
+| **Modo 0** | `0` | `0` | Baixo (`0`) | Subida (*positive edge*) | Descida (*negative edge*) |
+| **Modo 1** | `0` | `1` | Baixo (`0`) | Descida (*negative edge*) | Subida (*positive edge*) |
+| **Modo 2** | `1` | `0` | Alto (`1`) | Descida (*negative edge*) | Subida (*positive edge*) |
+| **Modo 3** | `1` | `1` | Alto (`1`) | Subida (*positive edge*) | Descida (*negative edge*) |
 
 ## 4. Arquitetura do sistema de topo (AES _top-level system_)
 
+![Diagrama de blocos da arquitetura do sistema de topo](semana_01/arquitetura.png)
+
 ## 5. Ambiente e fluxo mínimo
 
-## 6. _Backlog_ inicial
+O repositório `aes-spi-accelerator` segue a estrutura sugerida pelo instrutor (`docs/`, `rtl/`, `models/`, `tb/`, `formal/`, `syn/`, `upf/` e `scripts/`), disponível no arquivo `README.md` na raiz deste repositório. Ao executar o comando `make` no terminal na raiz, são executados _lint_, compilação e simulação com o VCS da Synopsys, usando como exemplo mínimo o módulo `dummy` (um flip-flop D com reset assíncrono) e o _testbench_ `dummy_tb`. O log da execução está em `docs/reports/semana-01-make.log`, para conferência.
+
+## 6. _Backlog_ do projeto
+
+O _backlog_ do projeto está registrado no [GitHub Project](https://github.com/users/luisign/projects/1) do repositório, organizado pelas semanas seguintes do cronograma.
+
+## 7. Referências bibliográficas
