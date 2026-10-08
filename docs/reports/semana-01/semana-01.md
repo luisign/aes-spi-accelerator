@@ -103,8 +103,7 @@ O _backlog_ do projeto está registrado no [GitHub Project](https://github.com/u
 
 ## 7. Referências bibliográficas
 
-*
-*
-*
-* 
-* Especificação funcional do projeto, em `docs/spec/`.
+* NIST. *FIPS 197-upd1: Advanced Encryption Standard (AES)*. Gaithersburg: NIST, 2023. DOI: [10.6028/NIST.FIPS.197-upd1](https://doi.org/10.6028/NIST.FIPS.197-upd1). Disponível em: <https://csrc.nist.gov/publications/detail/fips/197/final>. Acesso em: 2 out. 2026.
+* DWORKIN, M. *NIST SP 800-38A: Recommendation for Block Cipher Modes of Operation – Methods and Techniques*. Gaithersburg: NIST, 2001. Disponível em: <https://csrc.nist.gov/pubs/sp/800/38/a/final>. Acesso em: 8 out. 2026.
+* DHAKER, P. *Introduction to SPI Interface*. Analog Dialogue, v. 52, set. 2018. Disponível em: <https://www.signalintegrityjournal.com/articles/967-introduction-to-spi-interface>. Acesso em: 8 out. 2026.
+* Especificação funcional deste projeto. Disponível em `docs/spec/`.
