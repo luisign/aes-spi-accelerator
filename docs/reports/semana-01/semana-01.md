@@ -1,4 +1,4 @@
-# [PT-BR] Relatório da semana 01 - trilha de design RTL
+# [PT-BR] Relatório da semana 01 - trilha de Design RTL
 
 ## 1. Objetivo da semana
 
