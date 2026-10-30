@@ -91,7 +91,7 @@ O código utiliza funções para simular o comportamento matemático do corpo fi
 ```systemverilog
 module minisoc_aes_sbox_sub_shift_tb;
 
-  // Instanciações dos DUTs (Device Under Test)
+  // Instanciações dos DUTs:
   logic [7:0] sbox_in, sbox_out;
   logic [127:0] sb_in, sb_out;
   logic [127:0] sr_in, sr_out;
@@ -100,33 +100,33 @@ module minisoc_aes_sbox_sub_shift_tb;
   minisoc_aes_sub_bytes u_sub (.state_i(sb_in), .state_o(sb_out));
   minisoc_aes_shift_rows u_shift (.state_i(sr_in), .state_o(sr_out));
 
-  // Contadores de status
+  // Contadores de status:
   int errors = 0;
   int checks = 0;
 
   initial begin
-    // 1. Validação da S-Box (256 entradas + pontos FIPS-197)
+    // Validação da S-Box (256 entradas + pontos FIPS-197):
     for (int i = 0; i < 256; i++) begin
       sbox_in = i[7:0];
       #1;
       if (sbox_out !== sbox_ref(i[7:0])) errors++;
     end
 
-    // 2. Validação do SubBytes com vetores da FIPS-197
+    // Validação do SubBytes com vetores da FIPS-197:
     for (int r = 0; r < 10; r++) begin
       sb_in = vec_start[r];
       #1;
       if (sb_out !== vec_sub[r]) errors++;
     end
 
-    // 3. Validação do ShiftRows
+    // Validação do ShiftRows:
     for (int r = 0; r < 10; r++) begin
       sr_in = vec_sub[r];
       #1;
       if (sr_out !== vec_shift[r]) errors++;
     end
 
-    // Encerramento e verificação de sucesso
+    // Encerramento e verificação de sucesso:
     if (errors == 0) begin
       $display("PASS: Todas as verificacoes concluídas com 0 erros.");
       $finish;
