@@ -1,0 +1,130 @@
+                         Chronologic VCS (TM)
+       Version X-2025.06-SP2_Full64 -- Fri Oct 30 11:24:49 2026
+
+                    Copyright (c) 1991 - 2025 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_sbox.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_sub_bytes.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_shift_rows.sv'
+Parsing design file 'tb/minisoc_aes_sbox_sub_shift_tb.sv'
+
+Lint-[NS] Null statement
+tb/minisoc_aes_sbox_sub_shift_tb.sv, 106
+  Null statement is used in following verilog source.
+  Source info:     #1;
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_sbox_sub_shift_tb.sv, 111
+  Null statement is used in following verilog source.
+  Source info:       #1;
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_sbox_sub_shift_tb.sv, 115
+  Null statement is used in following verilog source.
+  Source info:     sbox_in = 8'h00; #1; check8("sbox(00) FIPS-197", sbox_out, 
+  8'h63);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_sbox_sub_shift_tb.sv, 116
+  Null statement is used in following verilog source.
+  Source info:     sbox_in = 8'h53; #1; check8("sbox(53) FIPS-197", sbox_out, 
+  8'hed);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_sbox_sub_shift_tb.sv, 124
+  Null statement is used in following verilog source.
+  Source info:       #1;
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_sbox_sub_shift_tb.sv, 133
+  Null statement is used in following verilog source.
+  Source info:       #1;
+
+Top Level Modules:
+       minisoc_aes_sbox_sub_shift_tb
+No TimeScale specified
+Starting vcs inline pass...
+2 modules and 0 UDP read.
+	However, due to incremental compilation, no re-compilation is necessary.
+make[1]: Entering directory '/home/luis.coutinho/Downloads/aes-spi-accelerator-w2/sim/csrc_lint'
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x /home/luis.coutinho/Downloads/aes-spi-accelerator-w2/sim/simv_lint ]; then chmod a-x /home/luis.coutinho/Downloads/aes-spi-accelerator-w2/sim/simv_lint; fi
+g++  -o /home/luis.coutinho/Downloads/aes-spi-accelerator-w2/sim/simv_lint      -rdynamic  -Wl,-rpath='$ORIGIN'/simv_lint.daidir -Wl,-rpath=./simv_lint.daidir -Wl,-rpath=/Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib -L/Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib  -Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o   _1414286_archive_1.so _prev_archive_1.so   SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o            -lvirsim -lerrorinf -lsnpsmalloc -lvfs      -lvcsnew -ldistsimclient -lsimprofile -luclinative /Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib/vcs_tls.o   -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive          /Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib/vcs_save_restore_new.o -ldl  -lc -lm -lpthread -ldl 
+/home/luis.coutinho/Downloads/aes-spi-accelerator-w2/sim/simv_lint up to date
+make[1]: Leaving directory '/home/luis.coutinho/Downloads/aes-spi-accelerator-w2/sim/csrc_lint'
+CPU time: .666 seconds to compile + .328 seconds to elab + .589 seconds to link
+[lint] linhas de Lint/Warning em sim/lint.log: 6
+                         Chronologic VCS (TM)
+       Version X-2025.06-SP2_Full64 -- Fri Oct 30 11:24:52 2026
+
+                    Copyright (c) 1991 - 2025 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_sbox.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_sub_bytes.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_shift_rows.sv'
+Parsing design file 'tb/minisoc_aes_sbox_sub_shift_tb.sv'
+Top Level Modules:
+       minisoc_aes_sbox_sub_shift_tb
+No TimeScale specified
+Starting vcs inline pass...
+2 modules and 0 UDP read.
+	However, due to incremental compilation, no re-compilation is necessary.
+make[1]: Entering directory '/home/luis.coutinho/Downloads/aes-spi-accelerator-w2/csrc'
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x ../sim/simv ]; then chmod a-x ../sim/simv; fi
+g++  -o ../sim/simv      -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir -Wl,-rpath=/Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib -L/Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib  -Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o   _1414999_archive_1.so _prev_archive_1.so   SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o            -lvirsim -lerrorinf -lsnpsmalloc -lvfs      -lvcsnew -ldistsimclient -lsimprofile -luclinative /Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib/vcs_tls.o   -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive        _vcs_pli_stub_.o   /Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib/vcs_save_restore_new.o /Tools/synopsys/verdi/X-2025.06-SP2/share/PLI/VCS/LINUX64/pli.a -ldl  -lc -lm -lpthread -ldl 
+../sim/simv up to date
+make[1]: Leaving directory '/home/luis.coutinho/Downloads/aes-spi-accelerator-w2/csrc'
+CPU time: .993 seconds to compile + .333 seconds to elab + .849 seconds to link
+Verdi KDB elaboration done and the database successfully generated
+Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
+Please use '-no_save' simv switch to avoid re-execution or '-suppress=ASLR_DETECTED_INFO' to suppress this message.
+Chronologic VCS simulator copyright 1991-2025
+Contains Synopsys proprietary information.
+Compiler version X-2025.06-SP2_Full64; Runtime version X-2025.06-SP2_Full64;  Oct 30 11:24 2026
+[INFO] S-box (256 entradas + 2 valores FIPS-197): 0 erro(s)
+[INFO] SubBytes (rodadas 1 a 10): 0 erro(s)
+[INFO] ShiftRows (rodadas 1 a 10): 0 erro(s)
+--------------------------------------------------
+PASS: 278 verificacoes, 0 erros
+$finish called from file "tb/minisoc_aes_sbox_sub_shift_tb.sv", line 142.
+$finish at simulation time                  279
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 279
+CPU Time:      0.380 seconds;       Data structure size:   0.0Mb
+Fri Oct 30 11:24:55 2026
+[sim] PASS
+[make] OK: lint, compilacao e simulacao concluidos com PASS.
