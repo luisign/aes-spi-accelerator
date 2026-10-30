@@ -1,0 +1,4 @@
+rtl/minisoc_aes/minisoc_aes_sbox.sv
+rtl/minisoc_aes/minisoc_aes_sub_bytes.sv
+rtl/minisoc_aes/minisoc_aes_shift_rows.sv
+tb/minisoc_aes_sbox_sub_shift_tb.sv
