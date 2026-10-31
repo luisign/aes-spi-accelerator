@@ -141,3 +141,13 @@ endmodule
 ## 6. Execução e critério de aceite
 
 O fluxo completo de compilação, _lint_ e simulação é acionado através do comando `make` integrando o arquivo de listagem de compilação (`scripts/arquivos.f`). O critério de aceite foi atingido, como é possível observar no arquivo de _log_ em `docs/reports/semana-02/semana-02-make.log`.
+As verificações foram:
+| Verificação | Quantidade | Erros |
+|---|---|---|
+| S-box, 256 entradas vs. referência do _testbench_ | 256 | 0 |
+| S-box, valores da FIPS-197 (`00→63`, `53→ed`) | 2 | 0 |
+| **SubBytes**, rodadas 1 a 10 | 10 | 0 |
+| **ShiftRows**, rodadas 1 a 10 | 10 | 0 |
+| **Total** | **278** | **0** |
+
+Resultado: `PASS: 278 verificacoes, 0 erros`. _Lint_ com 6 avisos `Lint-[NS] Null statement`, todos no _testbench_.
