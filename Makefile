@@ -10,7 +10,7 @@ FILELIST = scripts/arquivos.f
 SIM_EXEC = $(SIM_DIR)/simv
 
 # Modulo de topo da simulacao (testbench). Trocar aqui quando o testbench principal do projeto mudar.
-TOP ?= minisoc_aes_sbox_sub_shift_tb
+TOP ?= minisoc_aes_transforms_tb
 TOP_FLAG = $(if $(TOP),-top $(TOP),)
 
 # Flags de compilacao:
