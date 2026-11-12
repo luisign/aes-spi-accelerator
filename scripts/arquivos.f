@@ -7,4 +7,8 @@ rtl/minisoc_aes/minisoc_aes_add_round_key.sv
 rtl/minisoc_aes/minisoc_aes_inv_sub_bytes.sv
 rtl/minisoc_aes/minisoc_aes_inv_shift_rows.sv
 rtl/minisoc_aes/minisoc_aes_inv_mix_columns.sv
+rtl/minisoc_aes/minisoc_aes_key_exp.sv
+rtl/minisoc_aes/minisoc_aes_dp.sv
 tb/minisoc_aes_transforms_tb.sv
+tb/minisoc_aes_key_exp_tb.sv
+tb/minisoc_aes_dp_tb.sv
