@@ -1,27 +1,8 @@
-// Verificacoes do testbench:
-//  (1) S-box e S-box inversa nas 256 entradas, contra referencia aqui
-//      do testbench (inverso em GF(2^8) + transformacao afim; a inversa e a
-//      permutacao inversa dessa tabela).
-//  (2) Cifragem (chave 2b7e1516...): rodadas 1 a 10 de
-//      SubBytes e ShiftRows, rodadas 1 a 9 de MixColumns e as 11 chaves de rodada
-//      do AddRoundKey (incluindo a rodada inicial e a cifra final).
-//  (3) Cifragem inversa, (chave 000102...0f): rodadas 10 a 1
-//      de InvShiftRows, InvSubBytes e AddRoundKey, rodadas 10 a 2 de InvMixColumns.
-//  (4) Propriedades de inversa em vetores pseudoaleatorios deterministicos:
-//      InvSubBytes(SubBytes(x)) = x, InvShiftRows(ShiftRows(x)) = x,
-//      InvMixColumns(MixColumns(x)) = x e AddRoundKey aplicada duas vezes = x.
-//  (5) MixColumns e InvMixColumns contra um modelo de referencia do testbench
-//      (multiplicacao em GF(2^8) com os coeficientes da FIPS-197), em vetores
-//      pseudoaleatorios.
-// Em caso de falha,
-// termina com $fatal (codigo de saida diferente de zero).
-
 module minisoc_aes_transforms_tb;
 
-  localparam int N_RAND = 200; // vetores pseudoaleatorios por propriedade
+  localparam int N_RAND = 200;
 
   // DUTs:
-
   logic [7:0] sbox_in, sbox_out;
   logic [7:0] isbox_in, isbox_out;
   logic [127:0] sb_in, sb_out;
@@ -106,7 +87,7 @@ module minisoc_aes_transforms_tb;
 
   function automatic logic [127:0] mix_ref(input logic [127:0] s, input logic inv);
     logic [127:0] res;
-    logic [7:0]   acc;
+    logic [7:0] acc;
     res = '0;
     for (int c = 0; c < 4; c++) begin
       for (int r = 0; r < 4; r++) begin
@@ -121,7 +102,6 @@ module minisoc_aes_transforms_tb;
   endfunction
 
   // Gerador pseudoaleatorio deterministico (xorshift32): mesma sequencia sempre:
-
   logic [31:0] rng;
 
   task automatic next_rand(output logic [127:0] v);
@@ -190,7 +170,6 @@ module minisoc_aes_transforms_tb;
   end
 
   // Contadores e utilitarios de verificacao:
-
   int errors;
   int checks;
   int tick;
@@ -216,7 +195,6 @@ module minisoc_aes_transforms_tb;
   endtask
 
   // Estimulos:
-
   int e0;
   logic [127:0] x;
 
@@ -235,7 +213,7 @@ module minisoc_aes_transforms_tb;
     for (int i = 0; i < 256; i++) ref_sbox[i] = sbox_ref(i[7:0]);
     for (int i = 0; i < 256; i++) ref_inv[ref_sbox[i]] = i[7:0];
 
-    // (1) S-box e S-box inversa: 256 entradas:
+    // S-box e S-box inversa: 256 entradas:
     e0 = errors;
     for (int i = 0; i < 256; i++) begin
       sbox_in = i[7:0];
@@ -250,7 +228,7 @@ module minisoc_aes_transforms_tb;
     isbox_in = 8'hed; settle(); check8("inv_sbox(ed) FIPS-197", isbox_out, 8'h53);
     $display("[INFO] (1) S-box e S-box inversa (256 entradas): %0d erro(s)", errors - e0);
 
-    // (2) Cifragem:
+    // Cifragem:
     e0 = errors;
     for (int r = 0; r < 10; r++) begin
       sb_in = b_start[r];
@@ -272,7 +250,7 @@ module minisoc_aes_transforms_tb;
     end
     $display("[INFO] (2) SubBytes, ShiftRows, MixColumns, AddRoundKey: %0d erro(s)", errors - e0);
 
-    // (3) Cifragem inversa:
+    // Cifragem inversa:
     e0 = errors;
     for (int i = 0; i < 10; i++) begin
       isr_in = c_start[i];
@@ -291,7 +269,7 @@ module minisoc_aes_transforms_tb;
     end
     $display("[INFO] (3) InvShiftRows, InvSubBytes, InvMixColumns, AddRoundKey: %0d erro(s)", errors - e0);
 
-    // (4) Propriedades de inversa e (5) modelo de referencia:
+    // Propriedades de inversa e modelo de referencia:
     e0 = errors;
     for (int n = 0; n < N_RAND; n++) begin
       next_rand(x);
