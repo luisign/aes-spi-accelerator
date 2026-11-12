@@ -28,3 +28,8 @@ O `minisoc_aes_key_exp` recebe a chave de 128 bits capturada no estado inicial d
 ## 3. Máquina de estados do RTL do topo (`minisoc_aes_top`)
 
 Os estados do módulo do topo do Mini-SoC AES são os seguintes:
+
+### 3.1
+- **IDLE**:
+- **CHECK**:
+- 
