@@ -1,0 +1,1121 @@
+                         Chronologic VCS (TM)
+       Version X-2025.06-SP2_Full64 -- Thu Nov 12 15:39:14 2026
+
+                    Copyright (c) 1991 - 2025 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_sbox.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_sbox.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_sub_bytes.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_shift_rows.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_mix_columns.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_add_round_key.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_sub_bytes.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_shift_rows.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_mix_columns.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_key_exp.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_dp.sv'
+Parsing design file 'tb/minisoc_aes_transforms_tb.sv'
+Parsing design file 'tb/minisoc_aes_key_exp_tb.sv'
+
+Lint-[NS] Null statement
+tb/minisoc_aes_key_exp_tb.sv, 102
+  Null statement is used in following verilog source.
+  Source info:     repeat (n) @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_key_exp_tb.sv, 107
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_key_exp_tb.sv, 110
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_key_exp_tb.sv, 118
+  Null statement is used in following verilog source.
+  Source info:       @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_key_exp_tb.sv, 127
+  Null statement is used in following verilog source.
+  Source info:       @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_key_exp_tb.sv, 132
+  Null statement is used in following verilog source.
+  Source info:       @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_key_exp_tb.sv, 139
+  Null statement is used in following verilog source.
+  Source info:     repeat (TIMEOUT_CYCLES) @(posedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_key_exp_tb.sv, 164
+  Null statement is used in following verilog source.
+  Source info:       @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_key_exp_tb.sv, 212
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_key_exp_tb.sv, 226
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+Parsing design file 'tb/minisoc_aes_dp_tb.sv'
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 112
+  Null statement is used in following verilog source.
+  Source info:     repeat (n) @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 117
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 120
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 124
+  Null statement is used in following verilog source.
+  Source info:       @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 134
+  Null statement is used in following verilog source.
+  Source info:       @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 146
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 150
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 157
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 164
+  Null statement is used in following verilog source.
+  Source info:     repeat (TIMEOUT_CYCLES) @(posedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 215
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 218
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 223
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 231
+  Null statement is used in following verilog source.
+  Source info:       @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 243
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 247
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 253
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 258
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 271
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 275
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 286
+  Null statement is used in following verilog source.
+  Source info:         @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 296
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 300
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 310
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 314
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+Top Level Modules:
+       minisoc_aes_transforms_tb
+No TimeScale specified
+Starting vcs inline pass...
+3 modules and 0 UDP read.
+	However, due to incremental compilation, no re-compilation is necessary.
+make[1]: Entering directory '/home/luis.coutinho/Downloads/aes-spi-accelerator-w4-2/aes-spi-accelerator-12-nov/sim/minisoc_aes_transforms_tb/csrc_lint'
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x /home/luis.coutinho/Downloads/aes-spi-accelerator-w4-2/aes-spi-accelerator-12-nov/sim/minisoc_aes_transforms_tb/simv_lint ]; then chmod a-x /home/luis.coutinho/Downloads/aes-spi-accelerator-w4-2/aes-spi-accelerator-12-nov/sim/minisoc_aes_transforms_tb/simv_lint; fi
+g++  -o /home/luis.coutinho/Downloads/aes-spi-accelerator-w4-2/aes-spi-accelerator-12-nov/sim/minisoc_aes_transforms_tb/simv_lint      -rdynamic  -Wl,-rpath='$ORIGIN'/simv_lint.daidir -Wl,-rpath=./simv_lint.daidir -Wl,-rpath=/Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib -L/Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib  -Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o   _1112442_archive_1.so _prev_archive_1.so   SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o            -lvirsim -lerrorinf -lsnpsmalloc -lvfs      -lvcsnew -ldistsimclient -lsimprofile -luclinative /Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib/vcs_tls.o   -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive          /Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib/vcs_save_restore_new.o -ldl  -lc -lm -lpthread -ldl 
+/home/luis.coutinho/Downloads/aes-spi-accelerator-w4-2/aes-spi-accelerator-12-nov/sim/minisoc_aes_transforms_tb/simv_lint up to date
+make[1]: Leaving directory '/home/luis.coutinho/Downloads/aes-spi-accelerator-w4-2/aes-spi-accelerator-12-nov/sim/minisoc_aes_transforms_tb/csrc_lint'
+CPU time: .750 seconds to compile + .340 seconds to elab + .588 seconds to link
+[lint] minisoc_aes_transforms_tb: linhas de Lint/Warning em sim/minisoc_aes_transforms_tb/lint.log: 34
+                         Chronologic VCS (TM)
+       Version X-2025.06-SP2_Full64 -- Thu Nov 12 15:39:18 2026
+
+                    Copyright (c) 1991 - 2025 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_sbox.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_sbox.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_sub_bytes.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_shift_rows.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_mix_columns.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_add_round_key.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_sub_bytes.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_shift_rows.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_mix_columns.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_key_exp.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_dp.sv'
+Parsing design file 'tb/minisoc_aes_transforms_tb.sv'
+Parsing design file 'tb/minisoc_aes_key_exp_tb.sv'
+
+Lint-[NS] Null statement
+tb/minisoc_aes_key_exp_tb.sv, 102
+  Null statement is used in following verilog source.
+  Source info:     repeat (n) @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_key_exp_tb.sv, 107
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_key_exp_tb.sv, 110
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_key_exp_tb.sv, 118
+  Null statement is used in following verilog source.
+  Source info:       @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_key_exp_tb.sv, 127
+  Null statement is used in following verilog source.
+  Source info:       @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_key_exp_tb.sv, 132
+  Null statement is used in following verilog source.
+  Source info:       @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_key_exp_tb.sv, 139
+  Null statement is used in following verilog source.
+  Source info:     repeat (TIMEOUT_CYCLES) @(posedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_key_exp_tb.sv, 164
+  Null statement is used in following verilog source.
+  Source info:       @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_key_exp_tb.sv, 212
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_key_exp_tb.sv, 226
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+Parsing design file 'tb/minisoc_aes_dp_tb.sv'
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 112
+  Null statement is used in following verilog source.
+  Source info:     repeat (n) @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 117
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 120
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 124
+  Null statement is used in following verilog source.
+  Source info:       @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 134
+  Null statement is used in following verilog source.
+  Source info:       @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 146
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 150
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 157
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 164
+  Null statement is used in following verilog source.
+  Source info:     repeat (TIMEOUT_CYCLES) @(posedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 215
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 218
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 223
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 231
+  Null statement is used in following verilog source.
+  Source info:       @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 243
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 247
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 253
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 258
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 271
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 275
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 286
+  Null statement is used in following verilog source.
+  Source info:         @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 296
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 300
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 310
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 314
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+Top Level Modules:
+       minisoc_aes_key_exp_tb
+No TimeScale specified
+Starting vcs inline pass...
+2 modules and 0 UDP read.
+	However, due to incremental compilation, no re-compilation is necessary.
+make[1]: Entering directory '/home/luis.coutinho/Downloads/aes-spi-accelerator-w4-2/aes-spi-accelerator-12-nov/sim/minisoc_aes_key_exp_tb/csrc_lint'
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x /home/luis.coutinho/Downloads/aes-spi-accelerator-w4-2/aes-spi-accelerator-12-nov/sim/minisoc_aes_key_exp_tb/simv_lint ]; then chmod a-x /home/luis.coutinho/Downloads/aes-spi-accelerator-w4-2/aes-spi-accelerator-12-nov/sim/minisoc_aes_key_exp_tb/simv_lint; fi
+g++  -o /home/luis.coutinho/Downloads/aes-spi-accelerator-w4-2/aes-spi-accelerator-12-nov/sim/minisoc_aes_key_exp_tb/simv_lint      -rdynamic  -Wl,-rpath='$ORIGIN'/simv_lint.daidir -Wl,-rpath=./simv_lint.daidir -Wl,-rpath=/Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib -L/Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib  -Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o   _1113202_archive_1.so _prev_archive_1.so   SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o            -lvirsim -lerrorinf -lsnpsmalloc -lvfs      -lvcsnew -ldistsimclient -lsimprofile -luclinative /Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib/vcs_tls.o   -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive          /Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib/vcs_save_restore_new.o -ldl  -lc -lm -lpthread -ldl 
+/home/luis.coutinho/Downloads/aes-spi-accelerator-w4-2/aes-spi-accelerator-12-nov/sim/minisoc_aes_key_exp_tb/simv_lint up to date
+make[1]: Leaving directory '/home/luis.coutinho/Downloads/aes-spi-accelerator-w4-2/aes-spi-accelerator-12-nov/sim/minisoc_aes_key_exp_tb/csrc_lint'
+CPU time: .685 seconds to compile + .337 seconds to elab + .579 seconds to link
+[lint] minisoc_aes_key_exp_tb: linhas de Lint/Warning em sim/minisoc_aes_key_exp_tb/lint.log: 34
+                         Chronologic VCS (TM)
+       Version X-2025.06-SP2_Full64 -- Thu Nov 12 15:39:21 2026
+
+                    Copyright (c) 1991 - 2025 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_sbox.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_sbox.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_sub_bytes.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_shift_rows.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_mix_columns.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_add_round_key.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_sub_bytes.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_shift_rows.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_mix_columns.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_key_exp.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_dp.sv'
+Parsing design file 'tb/minisoc_aes_transforms_tb.sv'
+Parsing design file 'tb/minisoc_aes_key_exp_tb.sv'
+
+Lint-[NS] Null statement
+tb/minisoc_aes_key_exp_tb.sv, 102
+  Null statement is used in following verilog source.
+  Source info:     repeat (n) @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_key_exp_tb.sv, 107
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_key_exp_tb.sv, 110
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_key_exp_tb.sv, 118
+  Null statement is used in following verilog source.
+  Source info:       @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_key_exp_tb.sv, 127
+  Null statement is used in following verilog source.
+  Source info:       @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_key_exp_tb.sv, 132
+  Null statement is used in following verilog source.
+  Source info:       @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_key_exp_tb.sv, 139
+  Null statement is used in following verilog source.
+  Source info:     repeat (TIMEOUT_CYCLES) @(posedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_key_exp_tb.sv, 164
+  Null statement is used in following verilog source.
+  Source info:       @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_key_exp_tb.sv, 212
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_key_exp_tb.sv, 226
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+Parsing design file 'tb/minisoc_aes_dp_tb.sv'
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 112
+  Null statement is used in following verilog source.
+  Source info:     repeat (n) @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 117
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 120
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 124
+  Null statement is used in following verilog source.
+  Source info:       @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 134
+  Null statement is used in following verilog source.
+  Source info:       @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 146
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 150
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 157
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 164
+  Null statement is used in following verilog source.
+  Source info:     repeat (TIMEOUT_CYCLES) @(posedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 215
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 218
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 223
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 231
+  Null statement is used in following verilog source.
+  Source info:       @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 243
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 247
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 253
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 258
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 271
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 275
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 286
+  Null statement is used in following verilog source.
+  Source info:         @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 296
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 300
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 310
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+
+Lint-[NS] Null statement
+tb/minisoc_aes_dp_tb.sv, 314
+  Null statement is used in following verilog source.
+  Source info:     @(negedge clk);
+
+Top Level Modules:
+       minisoc_aes_dp_tb
+No TimeScale specified
+Starting vcs inline pass...
+3 modules and 0 UDP read.
+	However, due to incremental compilation, no re-compilation is necessary.
+make[1]: Entering directory '/home/luis.coutinho/Downloads/aes-spi-accelerator-w4-2/aes-spi-accelerator-12-nov/sim/minisoc_aes_dp_tb/csrc_lint'
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x /home/luis.coutinho/Downloads/aes-spi-accelerator-w4-2/aes-spi-accelerator-12-nov/sim/minisoc_aes_dp_tb/simv_lint ]; then chmod a-x /home/luis.coutinho/Downloads/aes-spi-accelerator-w4-2/aes-spi-accelerator-12-nov/sim/minisoc_aes_dp_tb/simv_lint; fi
+g++  -o /home/luis.coutinho/Downloads/aes-spi-accelerator-w4-2/aes-spi-accelerator-12-nov/sim/minisoc_aes_dp_tb/simv_lint      -rdynamic  -Wl,-rpath='$ORIGIN'/simv_lint.daidir -Wl,-rpath=./simv_lint.daidir -Wl,-rpath=/Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib -L/Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib  -Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o   _1113928_archive_1.so _prev_archive_1.so   SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o            -lvirsim -lerrorinf -lsnpsmalloc -lvfs      -lvcsnew -ldistsimclient -lsimprofile -luclinative /Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib/vcs_tls.o   -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive          /Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib/vcs_save_restore_new.o -ldl  -lc -lm -lpthread -ldl 
+/home/luis.coutinho/Downloads/aes-spi-accelerator-w4-2/aes-spi-accelerator-12-nov/sim/minisoc_aes_dp_tb/simv_lint up to date
+make[1]: Leaving directory '/home/luis.coutinho/Downloads/aes-spi-accelerator-w4-2/aes-spi-accelerator-12-nov/sim/minisoc_aes_dp_tb/csrc_lint'
+CPU time: .766 seconds to compile + .331 seconds to elab + .580 seconds to link
+[lint] minisoc_aes_dp_tb: linhas de Lint/Warning em sim/minisoc_aes_dp_tb/lint.log: 34
+                         Chronologic VCS (TM)
+       Version X-2025.06-SP2_Full64 -- Thu Nov 12 15:39:24 2026
+
+                    Copyright (c) 1991 - 2025 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_sbox.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_sbox.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_sub_bytes.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_shift_rows.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_mix_columns.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_add_round_key.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_sub_bytes.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_shift_rows.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_mix_columns.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_key_exp.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_dp.sv'
+Parsing design file 'tb/minisoc_aes_transforms_tb.sv'
+Parsing design file 'tb/minisoc_aes_key_exp_tb.sv'
+Parsing design file 'tb/minisoc_aes_dp_tb.sv'
+Top Level Modules:
+       minisoc_aes_transforms_tb
+No TimeScale specified
+Starting vcs inline pass...
+4 modules and 0 UDP read.
+	However, due to incremental compilation, no re-compilation is necessary.
+make[1]: Entering directory '/home/luis.coutinho/Downloads/aes-spi-accelerator-w4-2/aes-spi-accelerator-12-nov/sim/minisoc_aes_transforms_tb/csrc'
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x /home/luis.coutinho/Downloads/aes-spi-accelerator-w4-2/aes-spi-accelerator-12-nov/sim/minisoc_aes_transforms_tb/simv ]; then chmod a-x /home/luis.coutinho/Downloads/aes-spi-accelerator-w4-2/aes-spi-accelerator-12-nov/sim/minisoc_aes_transforms_tb/simv; fi
+g++  -o /home/luis.coutinho/Downloads/aes-spi-accelerator-w4-2/aes-spi-accelerator-12-nov/sim/minisoc_aes_transforms_tb/simv      -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir -Wl,-rpath=/Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib -L/Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib  -Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o   _1114776_archive_1.so _prev_archive_1.so   SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o            -lvirsim -lerrorinf -lsnpsmalloc -lvfs      -lvcsnew -ldistsimclient -lsimprofile -luclinative /Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib/vcs_tls.o   -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive        _vcs_pli_stub_.o   /Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib/vcs_save_restore_new.o /Tools/synopsys/verdi/X-2025.06-SP2/share/PLI/VCS/LINUX64/pli.a -ldl  -lc -lm -lpthread -ldl 
+/home/luis.coutinho/Downloads/aes-spi-accelerator-w4-2/aes-spi-accelerator-12-nov/sim/minisoc_aes_transforms_tb/simv up to date
+make[1]: Leaving directory '/home/luis.coutinho/Downloads/aes-spi-accelerator-w4-2/aes-spi-accelerator-12-nov/sim/minisoc_aes_transforms_tb/csrc'
+CPU time: 1.158 seconds to compile + .330 seconds to elab + .848 seconds to link
+Verdi KDB elaboration done and the database successfully generated
+Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
+Please use '-no_save' simv switch to avoid re-execution or '-suppress=ASLR_DETECTED_INFO' to suppress this message.
+Chronologic VCS simulator copyright 1991-2025
+Contains Synopsys proprietary information.
+Compiler version X-2025.06-SP2_Full64; Runtime version X-2025.06-SP2_Full64;  Nov 12 15:39 2026
+[INFO] (1) S-box e S-box inversa (256 entradas): 0 erro(s)
+[INFO] (2) SubBytes, ShiftRows, MixColumns, AddRoundKey: 0 erro(s)
+[INFO] (3) InvShiftRows, InvSubBytes, InvMixColumns, AddRoundKey: 0 erro(s)
+[INFO] (4)+(5) Propriedades de inversa e referencia (200 vetores): 0 erro(s)
+--------------------------------------------------
+PASS: 1795 verificacoes, 0 erros
+$finish called from file "tb/minisoc_aes_transforms_tb.sv", line 305.
+$finish at simulation time                 2110
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 2110
+CPU Time:      0.440 seconds;       Data structure size:   0.0Mb
+Thu Nov 12 15:39:27 2026
+[sim] minisoc_aes_transforms_tb: PASS: 1795 verificacoes, 0 erros
+                         Chronologic VCS (TM)
+       Version X-2025.06-SP2_Full64 -- Thu Nov 12 15:39:29 2026
+
+                    Copyright (c) 1991 - 2025 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_sbox.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_sbox.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_sub_bytes.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_shift_rows.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_mix_columns.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_add_round_key.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_sub_bytes.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_shift_rows.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_mix_columns.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_key_exp.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_dp.sv'
+Parsing design file 'tb/minisoc_aes_transforms_tb.sv'
+Parsing design file 'tb/minisoc_aes_key_exp_tb.sv'
+Parsing design file 'tb/minisoc_aes_dp_tb.sv'
+Top Level Modules:
+       minisoc_aes_key_exp_tb
+No TimeScale specified
+Starting vcs inline pass...
+2 modules and 0 UDP read.
+	However, due to incremental compilation, no re-compilation is necessary.
+make[1]: Entering directory '/home/luis.coutinho/Downloads/aes-spi-accelerator-w4-2/aes-spi-accelerator-12-nov/sim/minisoc_aes_key_exp_tb/csrc'
+make[1]: Leaving directory '/home/luis.coutinho/Downloads/aes-spi-accelerator-w4-2/aes-spi-accelerator-12-nov/sim/minisoc_aes_key_exp_tb/csrc'
+make[1]: Entering directory '/home/luis.coutinho/Downloads/aes-spi-accelerator-w4-2/aes-spi-accelerator-12-nov/sim/minisoc_aes_key_exp_tb/csrc'
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x /home/luis.coutinho/Downloads/aes-spi-accelerator-w4-2/aes-spi-accelerator-12-nov/sim/minisoc_aes_key_exp_tb/simv ]; then chmod a-x /home/luis.coutinho/Downloads/aes-spi-accelerator-w4-2/aes-spi-accelerator-12-nov/sim/minisoc_aes_key_exp_tb/simv; fi
+g++  -o /home/luis.coutinho/Downloads/aes-spi-accelerator-w4-2/aes-spi-accelerator-12-nov/sim/minisoc_aes_key_exp_tb/simv      -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir -Wl,-rpath=/Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib -L/Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib  -Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o   _1115898_archive_1.so _prev_archive_1.so   SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o            -lvirsim -lerrorinf -lsnpsmalloc -lvfs      -lvcsnew -ldistsimclient -lsimprofile -luclinative /Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib/vcs_tls.o   -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive        _vcs_pli_stub_.o   /Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib/vcs_save_restore_new.o /Tools/synopsys/verdi/X-2025.06-SP2/share/PLI/VCS/LINUX64/pli.a -ldl  -lc -lm -lpthread -ldl 
+/home/luis.coutinho/Downloads/aes-spi-accelerator-w4-2/aes-spi-accelerator-12-nov/sim/minisoc_aes_key_exp_tb/simv up to date
+make[1]: Leaving directory '/home/luis.coutinho/Downloads/aes-spi-accelerator-w4-2/aes-spi-accelerator-12-nov/sim/minisoc_aes_key_exp_tb/csrc'
+CPU time: 1.056 seconds to compile + .551 seconds to elab + .694 seconds to link
+Verdi KDB elaboration done and the database successfully generated
+Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
+Please use '-no_save' simv switch to avoid re-execution or '-suppress=ASLR_DETECTED_INFO' to suppress this message.
+Chronologic VCS simulator copyright 1991-2025
+Contains Synopsys proprietary information.
+Compiler version X-2025.06-SP2_Full64; Runtime version X-2025.06-SP2_Full64;  Nov 12 15:39 2026
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside minisoc_aes_key_exp_tb.dut.g_sub_word[0].u_sbox, at time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside minisoc_aes_key_exp_tb.dut.g_sub_word[1].u_sbox, at time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside minisoc_aes_key_exp_tb.dut.g_sub_word[2].u_sbox, at time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside minisoc_aes_key_exp_tb.dut.g_sub_word[3].u_sbox, at time 0s.
+
+[INFO] (1) Estado apos o reset: 0 erro(s)
+[INFO] (2) 12 chaves (latencia e 11 chaves de rodada cada): 0 erro(s)
+[INFO] (3) Captura no load e estabilidade: 0 erro(s)
+[INFO] (4) Recarga no meio da expansao: 0 erro(s)
+[INFO] (5) Novo load com chaves prontas: 0 erro(s)
+[INFO] (6) Reset no meio da expansao: 0 erro(s)
+--------------------------------------------------
+PASS: 325 verificacoes, 0 erros
+$finish called from file "tb/minisoc_aes_key_exp_tb.sv", line 241.
+$finish at simulation time                 5350
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 5350
+CPU Time:      0.410 seconds;       Data structure size:   0.0Mb
+Thu Nov 12 15:39:32 2026
+[sim] minisoc_aes_key_exp_tb: PASS: 325 verificacoes, 0 erros
+                         Chronologic VCS (TM)
+       Version X-2025.06-SP2_Full64 -- Thu Nov 12 15:39:34 2026
+
+                    Copyright (c) 1991 - 2025 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_sbox.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_sbox.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_sub_bytes.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_shift_rows.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_mix_columns.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_add_round_key.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_sub_bytes.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_shift_rows.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_mix_columns.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_key_exp.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_dp.sv'
+Parsing design file 'tb/minisoc_aes_transforms_tb.sv'
+Parsing design file 'tb/minisoc_aes_key_exp_tb.sv'
+Parsing design file 'tb/minisoc_aes_dp_tb.sv'
+Top Level Modules:
+       minisoc_aes_dp_tb
+No TimeScale specified
+Starting vcs inline pass...
+3 modules and 0 UDP read.
+	However, due to incremental compilation, no re-compilation is necessary.
+make[1]: Entering directory '/home/luis.coutinho/Downloads/aes-spi-accelerator-w4-2/aes-spi-accelerator-12-nov/sim/minisoc_aes_dp_tb/csrc'
+make[1]: Leaving directory '/home/luis.coutinho/Downloads/aes-spi-accelerator-w4-2/aes-spi-accelerator-12-nov/sim/minisoc_aes_dp_tb/csrc'
+make[1]: Entering directory '/home/luis.coutinho/Downloads/aes-spi-accelerator-w4-2/aes-spi-accelerator-12-nov/sim/minisoc_aes_dp_tb/csrc'
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x /home/luis.coutinho/Downloads/aes-spi-accelerator-w4-2/aes-spi-accelerator-12-nov/sim/minisoc_aes_dp_tb/simv ]; then chmod a-x /home/luis.coutinho/Downloads/aes-spi-accelerator-w4-2/aes-spi-accelerator-12-nov/sim/minisoc_aes_dp_tb/simv; fi
+g++  -o /home/luis.coutinho/Downloads/aes-spi-accelerator-w4-2/aes-spi-accelerator-12-nov/sim/minisoc_aes_dp_tb/simv      -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir -Wl,-rpath=/Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib -L/Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib  -Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o   _1116973_archive_1.so _prev_archive_1.so   SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o            -lvirsim -lerrorinf -lsnpsmalloc -lvfs      -lvcsnew -ldistsimclient -lsimprofile -luclinative /Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib/vcs_tls.o   -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive        _vcs_pli_stub_.o   /Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib/vcs_save_restore_new.o /Tools/synopsys/verdi/X-2025.06-SP2/share/PLI/VCS/LINUX64/pli.a -ldl  -lc -lm -lpthread -ldl 
+/home/luis.coutinho/Downloads/aes-spi-accelerator-w4-2/aes-spi-accelerator-12-nov/sim/minisoc_aes_dp_tb/simv up to date
+make[1]: Leaving directory '/home/luis.coutinho/Downloads/aes-spi-accelerator-w4-2/aes-spi-accelerator-12-nov/sim/minisoc_aes_dp_tb/csrc'
+CPU time: 1.176 seconds to compile + .553 seconds to elab + .690 seconds to link
+Verdi KDB elaboration done and the database successfully generated
+Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
+Please use '-no_save' simv switch to avoid re-execution or '-suppress=ASLR_DETECTED_INFO' to suppress this message.
+Chronologic VCS simulator copyright 1991-2025
+Contains Synopsys proprietary information.
+Compiler version X-2025.06-SP2_Full64; Runtime version X-2025.06-SP2_Full64;  Nov 12 15:39 2026
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside minisoc_aes_dp_tb.dut.u_key_exp.g_sub_word[0].u_sbox, at 
+  time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside minisoc_aes_dp_tb.dut.u_key_exp.g_sub_word[1].u_sbox, at 
+  time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside minisoc_aes_dp_tb.dut.u_key_exp.g_sub_word[2].u_sbox, at 
+  time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside minisoc_aes_dp_tb.dut.u_key_exp.g_sub_word[3].u_sbox, at 
+  time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_inv_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside 
+  minisoc_aes_dp_tb.dut.u_inv_sub_bytes.g_inv_sbox[0].u_inv_sbox, at time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_inv_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside 
+  minisoc_aes_dp_tb.dut.u_inv_sub_bytes.g_inv_sbox[1].u_inv_sbox, at time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_inv_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside 
+  minisoc_aes_dp_tb.dut.u_inv_sub_bytes.g_inv_sbox[2].u_inv_sbox, at time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_inv_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside 
+  minisoc_aes_dp_tb.dut.u_inv_sub_bytes.g_inv_sbox[3].u_inv_sbox, at time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_inv_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside 
+  minisoc_aes_dp_tb.dut.u_inv_sub_bytes.g_inv_sbox[4].u_inv_sbox, at time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_inv_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside 
+  minisoc_aes_dp_tb.dut.u_inv_sub_bytes.g_inv_sbox[5].u_inv_sbox, at time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_inv_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside 
+  minisoc_aes_dp_tb.dut.u_inv_sub_bytes.g_inv_sbox[6].u_inv_sbox, at time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_inv_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside 
+  minisoc_aes_dp_tb.dut.u_inv_sub_bytes.g_inv_sbox[7].u_inv_sbox, at time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_inv_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside 
+  minisoc_aes_dp_tb.dut.u_inv_sub_bytes.g_inv_sbox[8].u_inv_sbox, at time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_inv_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside 
+  minisoc_aes_dp_tb.dut.u_inv_sub_bytes.g_inv_sbox[9].u_inv_sbox, at time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_inv_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside 
+  minisoc_aes_dp_tb.dut.u_inv_sub_bytes.g_inv_sbox[10].u_inv_sbox, at time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_inv_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside 
+  minisoc_aes_dp_tb.dut.u_inv_sub_bytes.g_inv_sbox[11].u_inv_sbox, at time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_inv_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside 
+  minisoc_aes_dp_tb.dut.u_inv_sub_bytes.g_inv_sbox[12].u_inv_sbox, at time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_inv_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside 
+  minisoc_aes_dp_tb.dut.u_inv_sub_bytes.g_inv_sbox[13].u_inv_sbox, at time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_inv_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside 
+  minisoc_aes_dp_tb.dut.u_inv_sub_bytes.g_inv_sbox[14].u_inv_sbox, at time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_inv_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside 
+  minisoc_aes_dp_tb.dut.u_inv_sub_bytes.g_inv_sbox[15].u_inv_sbox, at time 0s.
+
+[INFO] (1) Estado apos o reset: 0 erro(s)
+[INFO] (2) 12 vetores, cifra e decifra (FIPS-197 e aleatorios): 0 erro(s)
+[INFO] (3) start_i sem chave pronta: 0 erro(s)
+[INFO] (4) start_i e key_load_i durante busy: 0 erro(s)
+[INFO] (5) Fluxo de 8 blocos seguidos: 0 erro(s)
+[INFO] (6) Reset no meio de uma operacao: 0 erro(s)
+--------------------------------------------------
+PASS: 563 verificacoes, 0 erros
+$finish called from file "tb/minisoc_aes_dp_tb.sv", line 329.
+$finish at simulation time                 6810
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 6810
+CPU Time:      0.460 seconds;       Data structure size:   0.0Mb
+Thu Nov 12 15:39:37 2026
+[sim] minisoc_aes_dp_tb: PASS: 563 verificacoes, 0 erros
+[make] OK: lint, compilacao e simulacao concluidos com PASS em: minisoc_aes_transforms_tb minisoc_aes_key_exp_tb minisoc_aes_dp_tb
