@@ -20,3 +20,11 @@ O `minisoc_top` integra quatro blocos, que são:  **SPI** (controle de dados por
 A microarquitetura escolhida para o AES é iterativa, com uma rodada por ciclo de _clock_. Um único bloco de rodada (**SubBytes, ShiftRows, MixColumns** e **AddRoundKey**) é reaproveitado 10 vezes, com um registrador de estado de 128 bits que guarda o resultado de cada rodada e o realimenta na entrada do mesmo bloco. Antes da primeira rodada há um ciclo de carga, em que o dado passa pelo **AddRoundKey**, então cada bloco leva 11 ciclos no núcleo (AES-128). Como a última rodada não tem **MixColumns**, o circuito a contorna.
 
 Na decifragem, o mesmo esquema usa as transformações inversas (**InvShiftRows, InvSubBytes** e **InvMixColumns**) e as chaves de rodada em ordem inversa. As chaves são geradas pelo **minisoc_aes_key_exp**, uma por ciclo, e guardadas em registradores.
+
+### 2.1. Chaves de rodada
+
+O `minisoc_aes_key_exp` recebe a chave de 128 bits capturada no estado inicial da FSM, **START**, e gera **K0** (chave 0) a **K10** (chave 10) em 10 ciclos, uma por ciclo, guardando as chaves em 11 registradores de 128 bits (**K0** é a chave original). Ao terminar, sinaliza _ready_ e serve a chave pedida por um índice chamado **round_idx**: de 0 a 10 na cifragem (operações diretas) e de 10 a 0 na decifragem (operações inversas). A expansão ocorre uma vez por **START** e vale para todos os blocos da operação. Ou seja, as chaves são pré-computadas. Desse modo, a decifragem fica mais simples (só inverte o índice, sem expansão inversa), e o custo de flip-flops acaba sendo menor.
+
+## 3. Máquina de estados do RTL do topo (`minisoc_aes_top`)
+
+Os estados do módulo do topo do Mini-SoC AES são os seguintes:
