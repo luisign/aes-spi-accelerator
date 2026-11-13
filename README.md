@@ -9,10 +9,15 @@ This project is part of the Brazilian microelectronics training program CI Exper
 ```
 .
 ├── docs/
-│   ├── spec/            # Functional specification
 │   ├── architecture/    # System and power architecture
-│   └── reports/         # Weekly reports
+│   ├── reports/         # Weekly reports
+│   └── spec/            # Functional specification
 ├── rtl/                 # RTL source code
+│   ├── minisoc_aes/     # minisoc_aes_top, minisoc_aes_dp, minisoc_aes_key_exp and submodules
+│   ├── minisoc_mem/     # minisoc_memory
+│   ├── minisoc_pll/     # minisoc_pll_mock
+│   ├── minisoc_spi/     # minisoc_spi
+│   └── minisoc_top.sv
 ├── models/              # Simple PLL and memory models
 ├── tb/                  # Testbenches
 ├── formal/              # Formality scripts and reports
