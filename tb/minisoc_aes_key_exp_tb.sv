@@ -2,7 +2,7 @@ module minisoc_aes_key_exp_tb;
 
   localparam int N_VEC = 12;
   localparam int LAT_EXPECTED = 10;
-  localparam int TIMEOUT_CYCLES  = 20000;
+  localparam int TIMEOUT_CYCLES = 20000;
 
   // DUT e geracao do sinal de clock:
   logic clk;
@@ -26,9 +26,9 @@ module minisoc_aes_key_exp_tb;
   initial clk = 1'b0;
   always #5 clk = ~clk;
 
-  // Vetores: chaves e chaves de rodada esperadas:
+  // Vetores de chaves e chaves de rodada esperadas:
   logic [127:0] vec_key [N_VEC];
-  logic [127:0] vec_rk  [N_VEC][11];
+  logic [127:0] vec_rk [N_VEC][11];
 
   initial begin
     vec_key[0] = 128'h2b7e151628aed2a6abf7158809cf4f3c;
@@ -72,6 +72,8 @@ module minisoc_aes_key_exp_tb;
   // Contadores e utilitarios de verificacao:
   int errors;
   int checks;
+  int cyc_cnt;
+  int wd_cnt;
 
   task automatic check1(input string name, input logic got, input logic exp);
     checks++;
@@ -93,50 +95,47 @@ module minisoc_aes_key_exp_tb;
     checks++;
     if (got !== exp) begin
       errors++;
-      $error("[FAIL] %s:\n obtido  =%032h\n esperado=%032h", name, got, exp);
+      $error("[FAIL] %s:\n obtido=%032h\n esperado=%032h", name, got, exp);
     end
   endtask
 
-  // Espera n bordas de descida do sinal de clock:
   task automatic cycles(input int n);
-    repeat (n) @(negedge clk);
+    repeat (n) @(negedge clk) cyc_cnt = cyc_cnt + 1;
   endtask
 
-  // Pulso de key_load_i de 1 ciclo. Ao retornar, vai estar no ciclo seguinte ao pulso:
   task automatic do_load(input logic [127:0] k);
-    @(negedge clk);
+    @(negedge clk) cyc_cnt = cyc_cnt + 1;
     key = k;
     key_load = 1'b1;
-    @(negedge clk);
+    @(negedge clk) cyc_cnt = cyc_cnt + 1;
     key_load = 1'b0;
   endtask
 
-  // Conta os ciclos ate key_ready_o subir (maximo 30):
   task automatic wait_ready(output int n);
     n = 0;
     while (!key_ready && n < 30) begin
-      @(negedge clk);
+      @(negedge clk) cyc_cnt = cyc_cnt + 1;
       n++;
     end
   endtask
 
-  // Confere rk[0..10] e que os indices 11 a 15 devolvem 0:
   task automatic check_rks(input string tag, input int v);
     for (int i = 0; i < 11; i++) begin
       sel = i[3:0];
-      @(negedge clk);
+      @(negedge clk) cyc_cnt = cyc_cnt + 1;
       check128($sformatf("%s rk[%0d]", tag, i), rk, vec_rk[v][i]);
     end
     for (int i = 11; i < 16; i++) begin
       sel = i[3:0];
-      @(negedge clk);
+      @(negedge clk) cyc_cnt = cyc_cnt + 1;
       check128($sformatf("%s rk[%0d] (indice invalido)", tag, i), rk, '0);
     end
   endtask
 
-  // Watchdog para evitar que a simulacao trave:
+  // Watchdog para evitar de a simulacao travar:
   initial begin
-    repeat (TIMEOUT_CYCLES) @(posedge clk);
+    wd_cnt = 0;
+    repeat (TIMEOUT_CYCLES) @(posedge clk) wd_cnt = wd_cnt + 1;
     $display("FAIL: watchdog - simulacao excedeu %0d ciclos", TIMEOUT_CYCLES);
     $fatal(1, "minisoc_aes_key_exp_tb: watchdog");
   end
@@ -148,6 +147,7 @@ module minisoc_aes_key_exp_tb;
   initial begin
     errors = 0;
     checks = 0;
+    cyc_cnt = 0;
     rst_n = 1'b0;
     key = '0;
     key_load = 1'b0;
@@ -161,12 +161,11 @@ module minisoc_aes_key_exp_tb;
     check1("key_ready apos reset", key_ready, 1'b0);
     for (int i = 0; i < 16; i++) begin
       sel = i[3:0];
-      @(negedge clk);
+      @(negedge clk) cyc_cnt = cyc_cnt + 1;
       check128($sformatf("rk_o sem chave, indice %0d", i), rk, '0);
     end
     $display("[INFO] (1) Estado apos o reset: %0d erro(s)", errors - e0);
 
-    // 12 chaves: latencia e 11 chaves de rodada:
     e0 = errors;
     for (int v = 0; v < N_VEC; v++) begin
       do_load(vec_key[v]);
@@ -178,7 +177,7 @@ module minisoc_aes_key_exp_tb;
     $display("[INFO] (2) %0d chaves (latencia e 11 chaves de rodada cada): %0d erro(s)",
              N_VEC, errors - e0);
 
-    // Chave capturada no load e estabilidade:
+    // Chave capturada no load:
     e0 = errors;
     do_load(vec_key[5]);
     key = ~vec_key[5];
@@ -209,7 +208,7 @@ module minisoc_aes_key_exp_tb;
     do_load(vec_key[9]);
     check1("novo load: key_ready cai", key_ready, 1'b0);
     sel = 4'd0;
-    @(negedge clk);
+    @(negedge clk) cyc_cnt = cyc_cnt + 1;
     check128("novo load: rk_o volta a 0 durante a expansao", rk, '0);
     wait_ready(n);
     check_rks("novo load", 9);
@@ -223,7 +222,7 @@ module minisoc_aes_key_exp_tb;
     cycles(2);
     check1("reset: key_ready em 0", key_ready, 1'b0);
     sel = 4'd0;
-    @(negedge clk);
+    @(negedge clk) cyc_cnt = cyc_cnt + 1;
     check128("reset: rk_o em 0", rk, '0);
     rst_n = 1'b1;
     cycles(15);
