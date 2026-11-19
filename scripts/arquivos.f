@@ -9,6 +9,9 @@ rtl/minisoc_aes/minisoc_aes_inv_shift_rows.sv
 rtl/minisoc_aes/minisoc_aes_inv_mix_columns.sv
 rtl/minisoc_aes/minisoc_aes_key_exp.sv
 rtl/minisoc_aes/minisoc_aes_dp.sv
+rtl/minisoc_pll/minisoc_pll_mock.sv
+rtl/minisoc_spi/minisoc_spi.sv
 tb/minisoc_aes_transforms_tb.sv
 tb/minisoc_aes_key_exp_tb.sv
 tb/minisoc_aes_dp_tb.sv
+tb/minisoc_spi_pll_tb.sv
