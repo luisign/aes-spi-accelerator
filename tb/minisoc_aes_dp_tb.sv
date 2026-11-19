@@ -74,6 +74,8 @@ module minisoc_aes_dp_tb;
   // Contadores e utilitarios de verificacao:
   int errors;
   int checks;
+  int cyc_cnt;
+  int wd_cnt;
 
   task automatic check1(input string name, input logic got, input logic exp);
     checks++;
@@ -95,11 +97,10 @@ module minisoc_aes_dp_tb;
     checks++;
     if (got !== exp) begin
       errors++;
-      $error("[FAIL] %s:\n obtido  =%032h\n esperado=%032h", name, got, exp);
+      $error("[FAIL] %s:\n obtido=%032h\n esperado=%032h", name, got, exp);
     end
   endtask
 
-  // busy_o e done_o nao pode ser 1 ao mesmo tempo:
   always @(negedge clk) begin
     if (rst_n && busy === 1'b1 && done === 1'b1) begin
       errors++;
@@ -107,61 +108,54 @@ module minisoc_aes_dp_tb;
     end
   end
 
-  // Espera n bordas de descida do clock:
   task automatic cycles(input int n);
-    repeat (n) @(negedge clk);
+    repeat (n) @(negedge clk) cyc_cnt = cyc_cnt + 1;
   endtask
 
-  // Pulso de key_load_i de 1 ciclo e espera key_ready_o e devolve os ciclos contados:
   task automatic load_key(input logic [127:0] k, output int n);
-    @(negedge clk);
+    @(negedge clk) cyc_cnt = cyc_cnt + 1;
     key = k;
     key_load = 1'b1;
-    @(negedge clk);
+    @(negedge clk) cyc_cnt = cyc_cnt + 1;
     key_load = 1'b0;
     n = 0;
     while (!key_ready && n < 40) begin
-      @(negedge clk);
+      @(negedge clk) cyc_cnt = cyc_cnt + 1;
       n++;
     end
   endtask
 
-  // Conta os ciclos ate done_o subir, vendo se busy_o fica em 1 enquanto isso:
   task automatic wait_done(output int n);
     n = 0;
     while (!done && n < 40) begin
       check1("busy_o durante a operacao", busy, 1'b1);
-      @(negedge clk);
+      @(negedge clk) cyc_cnt = cyc_cnt + 1;
       n++;
     end
   endtask
 
-  // start_i, espera done_o, confere o comportamento de busy/done:
-  task automatic run_block(
-    input logic [127:0] d, 
-    input logic decr,
-    output logic [127:0] res,
-    output int n);
-    
-    @(negedge clk);
+  task automatic run_block(input logic [127:0] d, input logic decr,
+                           output logic [127:0] res, output int n);
+    @(negedge clk) cyc_cnt = cyc_cnt + 1;
     din = d;
     dec = decr;
     start = 1'b1;
-    @(negedge clk);
+    @(negedge clk) cyc_cnt = cyc_cnt + 1;
     start = 1'b0;
     din = ~d;
     dec = ~decr;
     wait_done(n);
     check1("busy_o cai junto com done_o", busy, 1'b0);
     res = dout;
-    @(negedge clk);
+    @(negedge clk) cyc_cnt = cyc_cnt + 1;
     check1("done_o dura 1 ciclo", done, 1'b0);
     check128("data_o estavel apos o done_o", dout, res);
   endtask
 
   // Watchdog para evitar que a simulacao trave:
   initial begin
-    repeat (TIMEOUT_CYCLES) @(posedge clk);
+    wd_cnt = 0;
+    repeat (TIMEOUT_CYCLES) @(posedge clk) wd_cnt = wd_cnt + 1;
     $display("FAIL: watchdog - simulacao excedeu %0d ciclos", TIMEOUT_CYCLES);
     $fatal(1, "minisoc_aes_dp_tb: watchdog");
   end
@@ -175,6 +169,7 @@ module minisoc_aes_dp_tb;
   initial begin
     errors = 0;
     checks = 0;
+    cyc_cnt = 0;
     rst_n = 1'b0;
     key = '0;
     key_load = 1'b0;
@@ -192,7 +187,7 @@ module minisoc_aes_dp_tb;
     check1("apos reset: key_ready_o", key_ready, 1'b0);
     $display("[INFO] (1) Estado apos o reset: %0d erro(s)", errors - e0);
 
-    // Cifrando e decifrando 12 vetores:
+    // 12 vetores cifrando e decifrando:
     e0 = errors;
     for (int v = 0; v < N_VEC; v++) begin
       if (v > 0) check1($sformatf("vetor %0d: key_ready antes do load", v), key_ready, 1'b1);
@@ -212,15 +207,15 @@ module minisoc_aes_dp_tb;
 
     // start_i sem key_ready_o e ignorado:
     e0 = errors;
-    @(negedge clk);
+    @(negedge clk) cyc_cnt = cyc_cnt + 1;
     key = vec_key[4];
     key_load = 1'b1;
-    @(negedge clk);
+    @(negedge clk) cyc_cnt = cyc_cnt + 1;
     key_load = 1'b0;
     din = vec_pt[4];
     dec = 1'b0;
     start = 1'b1;
-    @(negedge clk);
+    @(negedge clk) cyc_cnt = cyc_cnt + 1;
     start = 1'b0;
     check1("start sem key_ready: key_ready ainda em 0", key_ready, 1'b0);
     cycles(3);
@@ -228,7 +223,7 @@ module minisoc_aes_dp_tb;
     check1("start sem key_ready: done_o", done, 1'b0);
     n = 0;
     while (!key_ready && n < 40) begin
-      @(negedge clk);
+      @(negedge clk) cyc_cnt = cyc_cnt + 1;
       n++;
     end
     cycles(15);
@@ -240,22 +235,22 @@ module minisoc_aes_dp_tb;
 
     // start_i e key_load_i durante busy_o sao ignorados:
     e0 = errors;
-    @(negedge clk);
+    @(negedge clk) cyc_cnt = cyc_cnt + 1;
     din = vec_pt[4];
     dec = 1'b0;
     start = 1'b1;
-    @(negedge clk);
+    @(negedge clk) cyc_cnt = cyc_cnt + 1;
     start = 1'b0;
     cycles(2);
     din = vec_ct[0];
     dec = 1'b1;
     start = 1'b1;
-    @(negedge clk);
+    @(negedge clk) cyc_cnt = cyc_cnt + 1;
     start = 1'b0;
     cycles(1);
     key = vec_key[0];
     key_load = 1'b1;
-    @(negedge clk);
+    @(negedge clk) cyc_cnt = cyc_cnt + 1;
     key_load = 1'b0;
     wait_done(n);
     check128("busy: resultado do primeiro start", dout, vec_ct[4]);
@@ -268,11 +263,11 @@ module minisoc_aes_dp_tb;
     e0 = errors;
     load_key(vec_key[STREAM_KEY], n);
     check_int("fluxo: latencia de key_ready", n, KEY_LAT);
-    @(negedge clk);
+    @(negedge clk) cyc_cnt = cyc_cnt + 1;
     din = st_in[0];
     dec = st_dec[0];
     start = 1'b1;
-    @(negedge clk);
+    @(negedge clk) cyc_cnt = cyc_cnt + 1;
     start = 1'b0;
     for (int i = 0; i < N_STREAM; i++) begin
       wait_done(n);
@@ -283,7 +278,7 @@ module minisoc_aes_dp_tb;
         din = st_in[i + 1];
         dec = st_dec[i + 1];
         start = 1'b1;
-        @(negedge clk);
+        @(negedge clk) cyc_cnt = cyc_cnt + 1;
         start = 1'b0;
         check1($sformatf("fluxo: start no ciclo do done_o aceito (bloco %0d)", i + 1), busy, 1'b1);
       end
@@ -293,11 +288,11 @@ module minisoc_aes_dp_tb;
 
     // Reset no meio de uma operacao:
     e0 = errors;
-    @(negedge clk);
+    @(negedge clk) cyc_cnt = cyc_cnt + 1;
     din = vec_pt[STREAM_KEY];
     dec = 1'b0;
     start = 1'b1;
-    @(negedge clk);
+    @(negedge clk) cyc_cnt = cyc_cnt + 1;
     start = 1'b0;
     cycles(4);
     check1("reset no meio: busy_o antes do reset", busy, 1'b1);
@@ -307,11 +302,11 @@ module minisoc_aes_dp_tb;
     check1("reset no meio: done_o", done, 1'b0);
     check1("reset no meio: key_ready_o", key_ready, 1'b0);
     rst_n = 1'b1;
-    @(negedge clk);
+    @(negedge clk) cyc_cnt = cyc_cnt + 1;
     din = vec_pt[STREAM_KEY];
     dec = 1'b0;
     start = 1'b1;
-    @(negedge clk);
+    @(negedge clk) cyc_cnt = cyc_cnt + 1;
     start = 1'b0;
     cycles(3);
     check1("reset no meio: start sem chave ignorado (busy_o)", busy, 1'b0);
