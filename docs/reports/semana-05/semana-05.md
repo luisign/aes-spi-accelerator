@@ -8,11 +8,11 @@ Implementar o front-end SPI com o banco de registradores (`minisoc_spi`) e o mod
 
 | Módulo | Descrição |
 |---|---|
-| `rtl/minisoc_spi/minisoc_spi.sv` | Módulo front-end SPI, banco de registradores e status |
-| `rtl/minisoc_pll/minisoc_pll_mock.sv` | Módulo do modelo RTL do PLL mockado |
-| `tb/minisoc_spi_pll_tb.sv` | _Testbench_ com SPI ligado ao PLL |
-| `tb/minisoc_aes_key_exp_tb.sv` e `tb/minisoc_aes_dp_tb.sv` | _Testbenches_ atualizados com esperas de borda reescritas para corrigir os avisos de _lint_ |
-| `Makefile` e `scripts/arquivos.f` | Arquivos atualizados com os novos módulos e _testbench_ |
+| `rtl/minisoc_spi/minisoc_spi.sv` | Módulo front-end SPI, banco de registradores e status. |
+| `rtl/minisoc_pll/minisoc_pll_mock.sv` | Módulo do modelo RTL do PLL mockado. |
+| `tb/minisoc_spi_pll_tb.sv` | _Testbench_ com SPI ligado ao PLL. |
+| `tb/minisoc_aes_key_exp_tb.sv` e `tb/minisoc_aes_dp_tb.sv` | _Testbenches_ atualizados com esperas de borda reescritas para corrigir os avisos de _lint_. |
+| `Makefile` e `scripts/arquivos.f` | Arquivos atualizados com os novos módulos e _testbench_. |
 
 
 ## 3. Módulo PLL (`minisoc_pll_mock`)
@@ -62,6 +62,19 @@ Os registradores de somente leitura (R) (`AES_STATUS`, `VERSION` e `SYSTEM_STATU
 
 ## 5. _Testbench_ (`minisoc_spi_pll_tb`)
 
+O _testbench_ gera os sinais do SPI como um dispositivo externo (o mestre SPI). Para isso, tem tarefas prontas para montar um _frame_ de 40 bits e enviá-lo bit a bit, uma para escrever um registrador e outra para ler, que já faz as duas transações da leitura (o pedido e o retorno pelo endereço `NOP`). Como o AES ainda não está ligado nesta etapa, o _testbench_ também simula os sinais de status do AES (`aes_busy_i`, `aes_done_i`, `aes_error_i` e `aes_blocks_done_i`), e atribui valores para conferir se eles aparecem de modo correto na leitura do `AES_STATUS`.
+
+Em paralelo, há monitores, pequenos trechos que ficam observando o circuito, medindo o período e a largura do `sys_clk` para confirmar que ele sai na frequência escolhida, também quantos ciclos o PLL demora para travar, e contando os pulsos de `START` e conferindo que o `sys_clk` não sobe enquanto o `PLL_LOCKED` está em `0`. A cada verificação, o _testbench_ compara o valor obtido com o esperado, soma um ao contador de verificações e, se algo estiver errado, registra um erro com uma mensagem indicando o que falhou. O _watchdog_ é um cronômetro para se a simulação passar de 3 milhões de ciclos sem terminar, ela é interrompida com `FAIL`, para evitar que um travamento deixe a simulação rodando de modo infinito. No fim, o _testbench_ mostra o total de verificações e imprime `PASS` se nenhum erro foi encontrado, ou `FAIL` com o número de erros.
+
 ## 6. Execução e resultados
 
 O comando `make` executa o _lint_, compilação e simulação dos quatro _testbenches_ do projeto. O _log_ completo está em `docs/reports/semana-05/semana-05-make.log`.
+
+| _Testbench_ | Simulação | _Lint_ |
+|---|---|---|
+| `minisoc_aes_transforms_tb` | `PASS: 1795 verificacoes, 0 erros` | 0 |
+| `minisoc_aes_key_exp_tb` | `PASS: 325 verificacoes, 0 erros` | 0 |
+| `minisoc_aes_dp_tb` | `PASS: 563 verificacoes, 0 erros` | 0 |
+| `minisoc_spi_pll_tb` | `PASS: 393 verificacoes, 0 erros` | 0 |
+
+**Avisos de execução:** na simulação do `key_exp_tb` e do `dp_tb` aparecem os avisos `RT-NCMUCS` no instante `0` (`No condition matches in 'unique case'`). Esses avisos vêm de entradas das S-boxes ainda em estado desconhecido `X` antes do _reset_, desaparecem em seguida e não afetam o resultado. Não há avisos desse tipo nos _testbenches_ das transformações e do SPI/PLL.
