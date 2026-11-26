@@ -33,7 +33,7 @@ O módulo instancia o `minisoc_aes_dp` (o *datapath* de núcleo iterativo de uma
 
 O acesso à memória pela *engine* AES ocorre da seguinte forma: para cada bloco, lê 4 palavras (5 ciclos, pela latência de 1 ciclo), processa no núcleo e escreve as 4 palavras no mesmo endereço de memória. O bloco lido fica em um registrador até o `POST`, para evitar perder o texto cifrado do **CBC**.
 
-Por falar no modo CBC, os modos implementados na *engine* AES são **ECB** (`MODE = 000`), **CBC** (`001`) e **CTR** (`101`), cifrando e decifrando.
+Por falar no modo **CBC**, os modos implementados na *engine* AES são **ECB** (`MODE = 000`), **CBC** (`001`) e **CTR** (`101`), cifrando e decifrando.
 
 ## 5. Modelo de referência (`scripts/gen_vectors.py`)
 
@@ -42,6 +42,8 @@ O _script_ implementa em Python o AES-128 da FIPS-197 e os modos **ECB**, **CBC*
 Se disponível, ele também utiliza a biblioteca `pycryptodome`. A geração é determinística. No **CTR** de 256 blocos o contador começa em `0x00000000FFFFFF80` para exercitar a passagem de `COUNTER_LO` para `COUNTER_HI`.
 
 ## 6. _Testbench_ de bloco (`minisoc_aes_top_tb`)
+
+O novo _testbench_ liga o `minisoc_aes_top` ao `minisoc_memory`, com `mem_clk` e `sys_clk` assíncronos (com períodos de 10 e 14), e lê os vetores de `tb/vectors/` com `$readmemh`. Cada caso grava a região de entrada pela interface `MEMORY_DATA`, entrega a memória ao AES, dá o `START`, devolve a memória e lê os 1024 endereços dela. Ele gera o _clock_/_reset_ e um _watchdog_, e termina com `PASS` ou `FAIL`.
 
 ## 7. Execução e resultados
 
@@ -69,4 +71,4 @@ O _lint_ não deu nenhum erro e nenhum aviso no projeto, inclusive nos dois mód
 
 ## 8. Limitações
 
-A principal limitação é a implementação dos modos **PCBC**, **CFB** e **OFB**, que não foram implementados.
+A principal limitação é a implementação dos modos **PCBC**, **CFB** e **OFB**, que não foram implementados. Estão previstos para a semana 10. Nesta versão eles geram `ERROR` em vez de processar de forma incorreta. Isso desvia da especificação do _Block Guide_, que lista esses modos como válidos.
