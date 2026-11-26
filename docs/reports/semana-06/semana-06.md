@@ -25,4 +25,18 @@ Implementar a memória compartilhada (`minisoc_memory`) e o _engine_ AES com o c
 
 ## 7. Execução e resultados
 
+O comando `make` executa _lint_, compilação e simulação dos cinco _testbenches_ do projeto. O _log_ completo está em `docs/reports/semana-06/semana-06-make.log`.
+
+| _Testbench_ | Simulação | _Lint_ |
+|---|---|---|
+| `minisoc_aes_transforms_tb` | `PASS: 1795 verificacoes, 0 erros` | `0` |
+| `minisoc_aes_key_exp_tb` | `PASS: 325 verificacoes, 0 erros` | `0` |
+| `minisoc_aes_dp_tb` | `PASS: 563 verificacoes, 0 erros` | `0` |
+| `minisoc_spi_pll_tb` | `PASS: 393 verificacoes, 0 erros` | `0` |
+| `minisoc_aes_top_tb` | `PASS: 33041 verificacoes, 0 erros` | `0` |
+ 
+O _lint_ não deu nenhum erro e nenhum aviso no projeto, inclusive nos dois módulos novos. A ferramenta não apontou os _latches_ de _clock gating_ da memória, que são intencionais.
+ 
+**Avisos de execução:** nos _testbenches_ que instanciam o núcleo (`key_exp_tb`, `dp_tb` e `aes_top_tb`) aparecem avisos `RT-NCMUCS` no instante `0`, por causa das entradas das S-boxes ainda em `X` antes do _reset_ agir (4 no `key_exp_tb`, 20 no `dp_tb` e 20 no `aes_top_tb`). Estes avisos desaparecem em seguida e não afetam o resultado.
+
 ## 8. Limitações
