@@ -1,0 +1,967 @@
+                         Chronologic VCS (TM)
+       Version X-2025.06-SP2_Full64 -- Wed Nov 25 21:47:48 2026
+
+                    Copyright (c) 1991 - 2025 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_sbox.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_sbox.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_sub_bytes.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_shift_rows.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_mix_columns.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_add_round_key.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_sub_bytes.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_shift_rows.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_mix_columns.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_key_exp.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_dp.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_top.sv'
+Parsing design file 'rtl/minisoc_mem/minisoc_memory.sv'
+Parsing design file 'rtl/minisoc_pll/minisoc_pll_mock.sv'
+Parsing design file 'rtl/minisoc_spi/minisoc_spi.sv'
+Parsing design file 'tb/minisoc_aes_transforms_tb.sv'
+Parsing design file 'tb/minisoc_aes_key_exp_tb.sv'
+Parsing design file 'tb/minisoc_aes_dp_tb.sv'
+Parsing design file 'tb/minisoc_spi_pll_tb.sv'
+Parsing design file 'tb/minisoc_aes_top_tb.sv'
+Top Level Modules:
+       minisoc_aes_transforms_tb
+No TimeScale specified
+Starting vcs inline pass...
+3 modules and 0 UDP read.
+	However, due to incremental compilation, no re-compilation is necessary.
+make[1]: Entering directory '/home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_transforms_tb/csrc_lint'
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x /home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_transforms_tb/simv_lint ]; then chmod a-x /home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_transforms_tb/simv_lint; fi
+g++  -o /home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_transforms_tb/simv_lint      -rdynamic  -Wl,-rpath='$ORIGIN'/simv_lint.daidir -Wl,-rpath=./simv_lint.daidir -Wl,-rpath=/Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib -L/Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib  -Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o   _1798391_archive_1.so _prev_archive_1.so   SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o            -lvirsim -lerrorinf -lsnpsmalloc -lvfs      -lvcsnew -ldistsimclient -lsimprofile -luclinative /Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib/vcs_tls.o   -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive          /Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib/vcs_save_restore_new.o -ldl  -lc -lm -lpthread -ldl 
+/home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_transforms_tb/simv_lint up to date
+make[1]: Leaving directory '/home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_transforms_tb/csrc_lint'
+CPU time: .771 seconds to compile + .332 seconds to elab + .585 seconds to link
+[lint] minisoc_aes_transforms_tb: linhas de Lint/Warning em sim/minisoc_aes_transforms_tb/lint.log: 0
+                         Chronologic VCS (TM)
+       Version X-2025.06-SP2_Full64 -- Wed Nov 25 21:47:51 2026
+
+                    Copyright (c) 1991 - 2025 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_sbox.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_sbox.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_sub_bytes.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_shift_rows.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_mix_columns.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_add_round_key.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_sub_bytes.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_shift_rows.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_mix_columns.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_key_exp.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_dp.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_top.sv'
+Parsing design file 'rtl/minisoc_mem/minisoc_memory.sv'
+Parsing design file 'rtl/minisoc_pll/minisoc_pll_mock.sv'
+Parsing design file 'rtl/minisoc_spi/minisoc_spi.sv'
+Parsing design file 'tb/minisoc_aes_transforms_tb.sv'
+Parsing design file 'tb/minisoc_aes_key_exp_tb.sv'
+Parsing design file 'tb/minisoc_aes_dp_tb.sv'
+Parsing design file 'tb/minisoc_spi_pll_tb.sv'
+Parsing design file 'tb/minisoc_aes_top_tb.sv'
+Top Level Modules:
+       minisoc_aes_key_exp_tb
+No TimeScale specified
+Starting vcs inline pass...
+2 modules and 0 UDP read.
+	However, due to incremental compilation, no re-compilation is necessary.
+make[1]: Entering directory '/home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_key_exp_tb/csrc_lint'
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x /home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_key_exp_tb/simv_lint ]; then chmod a-x /home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_key_exp_tb/simv_lint; fi
+g++  -o /home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_key_exp_tb/simv_lint      -rdynamic  -Wl,-rpath='$ORIGIN'/simv_lint.daidir -Wl,-rpath=./simv_lint.daidir -Wl,-rpath=/Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib -L/Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib  -Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o   _1799051_archive_1.so _prev_archive_1.so   SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o            -lvirsim -lerrorinf -lsnpsmalloc -lvfs      -lvcsnew -ldistsimclient -lsimprofile -luclinative /Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib/vcs_tls.o   -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive          /Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib/vcs_save_restore_new.o -ldl  -lc -lm -lpthread -ldl 
+/home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_key_exp_tb/simv_lint up to date
+make[1]: Leaving directory '/home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_key_exp_tb/csrc_lint'
+CPU time: .724 seconds to compile + .336 seconds to elab + .591 seconds to link
+[lint] minisoc_aes_key_exp_tb: linhas de Lint/Warning em sim/minisoc_aes_key_exp_tb/lint.log: 0
+                         Chronologic VCS (TM)
+       Version X-2025.06-SP2_Full64 -- Wed Nov 25 21:47:54 2026
+
+                    Copyright (c) 1991 - 2025 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_sbox.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_sbox.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_sub_bytes.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_shift_rows.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_mix_columns.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_add_round_key.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_sub_bytes.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_shift_rows.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_mix_columns.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_key_exp.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_dp.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_top.sv'
+Parsing design file 'rtl/minisoc_mem/minisoc_memory.sv'
+Parsing design file 'rtl/minisoc_pll/minisoc_pll_mock.sv'
+Parsing design file 'rtl/minisoc_spi/minisoc_spi.sv'
+Parsing design file 'tb/minisoc_aes_transforms_tb.sv'
+Parsing design file 'tb/minisoc_aes_key_exp_tb.sv'
+Parsing design file 'tb/minisoc_aes_dp_tb.sv'
+Parsing design file 'tb/minisoc_spi_pll_tb.sv'
+Parsing design file 'tb/minisoc_aes_top_tb.sv'
+Top Level Modules:
+       minisoc_aes_dp_tb
+No TimeScale specified
+Starting vcs inline pass...
+3 modules and 0 UDP read.
+	However, due to incremental compilation, no re-compilation is necessary.
+make[1]: Entering directory '/home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_dp_tb/csrc_lint'
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x /home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_dp_tb/simv_lint ]; then chmod a-x /home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_dp_tb/simv_lint; fi
+g++  -o /home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_dp_tb/simv_lint      -rdynamic  -Wl,-rpath='$ORIGIN'/simv_lint.daidir -Wl,-rpath=./simv_lint.daidir -Wl,-rpath=/Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib -L/Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib  -Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o   _1799705_archive_1.so _prev_archive_1.so   SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o            -lvirsim -lerrorinf -lsnpsmalloc -lvfs      -lvcsnew -ldistsimclient -lsimprofile -luclinative /Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib/vcs_tls.o   -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive          /Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib/vcs_save_restore_new.o -ldl  -lc -lm -lpthread -ldl 
+/home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_dp_tb/simv_lint up to date
+make[1]: Leaving directory '/home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_dp_tb/csrc_lint'
+CPU time: .791 seconds to compile + .334 seconds to elab + .584 seconds to link
+[lint] minisoc_aes_dp_tb: linhas de Lint/Warning em sim/minisoc_aes_dp_tb/lint.log: 0
+                         Chronologic VCS (TM)
+       Version X-2025.06-SP2_Full64 -- Wed Nov 25 21:47:58 2026
+
+                    Copyright (c) 1991 - 2025 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_sbox.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_sbox.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_sub_bytes.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_shift_rows.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_mix_columns.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_add_round_key.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_sub_bytes.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_shift_rows.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_mix_columns.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_key_exp.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_dp.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_top.sv'
+Parsing design file 'rtl/minisoc_mem/minisoc_memory.sv'
+Parsing design file 'rtl/minisoc_pll/minisoc_pll_mock.sv'
+Parsing design file 'rtl/minisoc_spi/minisoc_spi.sv'
+Parsing design file 'tb/minisoc_aes_transforms_tb.sv'
+Parsing design file 'tb/minisoc_aes_key_exp_tb.sv'
+Parsing design file 'tb/minisoc_aes_dp_tb.sv'
+Parsing design file 'tb/minisoc_spi_pll_tb.sv'
+Parsing design file 'tb/minisoc_aes_top_tb.sv'
+Top Level Modules:
+       minisoc_spi_pll_tb
+No TimeScale specified
+Starting vcs inline pass...
+1 module and 0 UDP read.
+	However, due to incremental compilation, no re-compilation is necessary.
+make[1]: Entering directory '/home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_spi_pll_tb/csrc_lint'
+make[1]: Leaving directory '/home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_spi_pll_tb/csrc_lint'
+make[1]: Entering directory '/home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_spi_pll_tb/csrc_lint'
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x /home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_spi_pll_tb/simv_lint ]; then chmod a-x /home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_spi_pll_tb/simv_lint; fi
+g++  -o /home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_spi_pll_tb/simv_lint      -rdynamic  -Wl,-rpath='$ORIGIN'/simv_lint.daidir -Wl,-rpath=./simv_lint.daidir -Wl,-rpath=/Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib -L/Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib  -Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o   _1800507_archive_1.so _prev_archive_1.so   SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o            -lvirsim -lerrorinf -lsnpsmalloc -lvfs      -lvcsnew -ldistsimclient -lsimprofile -luclinative /Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib/vcs_tls.o   -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive          /Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib/vcs_save_restore_new.o -ldl  -lc -lm -lpthread -ldl 
+/home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_spi_pll_tb/simv_lint up to date
+make[1]: Leaving directory '/home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_spi_pll_tb/csrc_lint'
+CPU time: .727 seconds to compile + .554 seconds to elab + .427 seconds to link
+[lint] minisoc_spi_pll_tb: linhas de Lint/Warning em sim/minisoc_spi_pll_tb/lint.log: 0
+                         Chronologic VCS (TM)
+       Version X-2025.06-SP2_Full64 -- Wed Nov 25 21:48:01 2026
+
+                    Copyright (c) 1991 - 2025 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_sbox.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_sbox.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_sub_bytes.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_shift_rows.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_mix_columns.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_add_round_key.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_sub_bytes.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_shift_rows.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_mix_columns.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_key_exp.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_dp.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_top.sv'
+Parsing design file 'rtl/minisoc_mem/minisoc_memory.sv'
+Parsing design file 'rtl/minisoc_pll/minisoc_pll_mock.sv'
+Parsing design file 'rtl/minisoc_spi/minisoc_spi.sv'
+Parsing design file 'tb/minisoc_aes_transforms_tb.sv'
+Parsing design file 'tb/minisoc_aes_key_exp_tb.sv'
+Parsing design file 'tb/minisoc_aes_dp_tb.sv'
+Parsing design file 'tb/minisoc_spi_pll_tb.sv'
+Parsing design file 'tb/minisoc_aes_top_tb.sv'
+Top Level Modules:
+       minisoc_aes_top_tb
+No TimeScale specified
+Starting vcs inline pass...
+3 modules and 0 UDP read.
+	However, due to incremental compilation, no re-compilation is necessary.
+make[1]: Entering directory '/home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_top_tb/csrc_lint'
+make[1]: Leaving directory '/home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_top_tb/csrc_lint'
+make[1]: Entering directory '/home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_top_tb/csrc_lint'
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x /home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_top_tb/simv_lint ]; then chmod a-x /home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_top_tb/simv_lint; fi
+g++  -o /home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_top_tb/simv_lint      -rdynamic  -Wl,-rpath='$ORIGIN'/simv_lint.daidir -Wl,-rpath=./simv_lint.daidir -Wl,-rpath=/Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib -L/Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib  -Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o   _1801217_archive_1.so _prev_archive_1.so   SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o            -lvirsim -lerrorinf -lsnpsmalloc -lvfs      -lvcsnew -ldistsimclient -lsimprofile -luclinative /Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib/vcs_tls.o   -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive          /Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib/vcs_save_restore_new.o -ldl  -lc -lm -lpthread -ldl 
+/home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_top_tb/simv_lint up to date
+make[1]: Leaving directory '/home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_top_tb/csrc_lint'
+CPU time: .824 seconds to compile + .548 seconds to elab + .432 seconds to link
+[lint] minisoc_aes_top_tb: linhas de Lint/Warning em sim/minisoc_aes_top_tb/lint.log: 0
+                         Chronologic VCS (TM)
+       Version X-2025.06-SP2_Full64 -- Wed Nov 25 21:48:05 2026
+
+                    Copyright (c) 1991 - 2025 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_sbox.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_sbox.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_sub_bytes.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_shift_rows.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_mix_columns.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_add_round_key.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_sub_bytes.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_shift_rows.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_mix_columns.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_key_exp.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_dp.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_top.sv'
+Parsing design file 'rtl/minisoc_mem/minisoc_memory.sv'
+Parsing design file 'rtl/minisoc_pll/minisoc_pll_mock.sv'
+Parsing design file 'rtl/minisoc_spi/minisoc_spi.sv'
+Parsing design file 'tb/minisoc_aes_transforms_tb.sv'
+Parsing design file 'tb/minisoc_aes_key_exp_tb.sv'
+Parsing design file 'tb/minisoc_aes_dp_tb.sv'
+Parsing design file 'tb/minisoc_spi_pll_tb.sv'
+Parsing design file 'tb/minisoc_aes_top_tb.sv'
+Top Level Modules:
+       minisoc_aes_transforms_tb
+No TimeScale specified
+Starting vcs inline pass...
+4 modules and 0 UDP read.
+	However, due to incremental compilation, no re-compilation is necessary.
+make[1]: Entering directory '/home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_transforms_tb/csrc'
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x /home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_transforms_tb/simv ]; then chmod a-x /home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_transforms_tb/simv; fi
+g++  -o /home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_transforms_tb/simv      -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir -Wl,-rpath=/Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib -L/Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib  -Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o   _1802035_archive_1.so _prev_archive_1.so   SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o            -lvirsim -lerrorinf -lsnpsmalloc -lvfs      -lvcsnew -ldistsimclient -lsimprofile -luclinative /Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib/vcs_tls.o   -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive        _vcs_pli_stub_.o   /Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib/vcs_save_restore_new.o /Tools/synopsys/verdi/X-2025.06-SP2/share/PLI/VCS/LINUX64/pli.a -ldl  -lc -lm -lpthread -ldl 
+/home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_transforms_tb/simv up to date
+make[1]: Leaving directory '/home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_transforms_tb/csrc'
+CPU time: 1.260 seconds to compile + .336 seconds to elab + .845 seconds to link
+Verdi KDB elaboration done and the database successfully generated
+Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
+Please use '-no_save' simv switch to avoid re-execution or '-suppress=ASLR_DETECTED_INFO' to suppress this message.
+Chronologic VCS simulator copyright 1991-2025
+Contains Synopsys proprietary information.
+Compiler version X-2025.06-SP2_Full64; Runtime version X-2025.06-SP2_Full64;  Nov 25 21:48 2026
+[INFO] (1) S-box e S-box inversa (256 entradas): 0 erro(s)
+[INFO] (2) SubBytes, ShiftRows, MixColumns, AddRoundKey: 0 erro(s)
+[INFO] (3) InvShiftRows, InvSubBytes, InvMixColumns, AddRoundKey: 0 erro(s)
+[INFO] (4)+(5) Propriedades de inversa e referencia (200 vetores): 0 erro(s)
+--------------------------------------------------
+PASS: 1795 verificacoes, 0 erros
+$finish called from file "tb/minisoc_aes_transforms_tb.sv", line 301.
+$finish at simulation time                 2110
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 2110
+CPU Time:      0.440 seconds;       Data structure size:   0.0Mb
+Wed Nov 25 21:48:08 2026
+[sim] minisoc_aes_transforms_tb: PASS: 1795 verificacoes, 0 erros
+                         Chronologic VCS (TM)
+       Version X-2025.06-SP2_Full64 -- Wed Nov 25 21:48:09 2026
+
+                    Copyright (c) 1991 - 2025 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_sbox.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_sbox.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_sub_bytes.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_shift_rows.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_mix_columns.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_add_round_key.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_sub_bytes.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_shift_rows.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_mix_columns.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_key_exp.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_dp.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_top.sv'
+Parsing design file 'rtl/minisoc_mem/minisoc_memory.sv'
+Parsing design file 'rtl/minisoc_pll/minisoc_pll_mock.sv'
+Parsing design file 'rtl/minisoc_spi/minisoc_spi.sv'
+Parsing design file 'tb/minisoc_aes_transforms_tb.sv'
+Parsing design file 'tb/minisoc_aes_key_exp_tb.sv'
+Parsing design file 'tb/minisoc_aes_dp_tb.sv'
+Parsing design file 'tb/minisoc_spi_pll_tb.sv'
+Parsing design file 'tb/minisoc_aes_top_tb.sv'
+Top Level Modules:
+       minisoc_aes_key_exp_tb
+No TimeScale specified
+Starting vcs inline pass...
+2 modules and 0 UDP read.
+	However, due to incremental compilation, no re-compilation is necessary.
+make[1]: Entering directory '/home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_key_exp_tb/csrc'
+make[1]: Leaving directory '/home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_key_exp_tb/csrc'
+make[1]: Entering directory '/home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_key_exp_tb/csrc'
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x /home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_key_exp_tb/simv ]; then chmod a-x /home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_key_exp_tb/simv; fi
+g++  -o /home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_key_exp_tb/simv      -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir -Wl,-rpath=/Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib -L/Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib  -Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o   _1803017_archive_1.so _prev_archive_1.so   SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o            -lvirsim -lerrorinf -lsnpsmalloc -lvfs      -lvcsnew -ldistsimclient -lsimprofile -luclinative /Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib/vcs_tls.o   -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive        _vcs_pli_stub_.o   /Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib/vcs_save_restore_new.o /Tools/synopsys/verdi/X-2025.06-SP2/share/PLI/VCS/LINUX64/pli.a -ldl  -lc -lm -lpthread -ldl 
+/home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_key_exp_tb/simv up to date
+make[1]: Leaving directory '/home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_key_exp_tb/csrc'
+CPU time: 1.147 seconds to compile + .553 seconds to elab + .694 seconds to link
+Verdi KDB elaboration done and the database successfully generated
+Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
+Please use '-no_save' simv switch to avoid re-execution or '-suppress=ASLR_DETECTED_INFO' to suppress this message.
+Chronologic VCS simulator copyright 1991-2025
+Contains Synopsys proprietary information.
+Compiler version X-2025.06-SP2_Full64; Runtime version X-2025.06-SP2_Full64;  Nov 25 21:48 2026
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside minisoc_aes_key_exp_tb.dut.g_sub_word[0].u_sbox, at time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside minisoc_aes_key_exp_tb.dut.g_sub_word[1].u_sbox, at time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside minisoc_aes_key_exp_tb.dut.g_sub_word[2].u_sbox, at time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside minisoc_aes_key_exp_tb.dut.g_sub_word[3].u_sbox, at time 0s.
+
+[INFO] (1) Estado apos o reset: 0 erro(s)
+[INFO] (2) 12 chaves (latencia e 11 chaves de rodada cada): 0 erro(s)
+[INFO] (3) Captura no load e estabilidade: 0 erro(s)
+[INFO] (4) Recarga no meio da expansao: 0 erro(s)
+[INFO] (5) Novo load com chaves prontas: 0 erro(s)
+[INFO] (6) Reset no meio da expansao: 0 erro(s)
+--------------------------------------------------
+PASS: 325 verificacoes, 0 erros
+$finish called from file "tb/minisoc_aes_key_exp_tb.sv", line 240.
+$finish at simulation time                 5350
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 5350
+CPU Time:      0.410 seconds;       Data structure size:   0.0Mb
+Wed Nov 25 21:48:12 2026
+[sim] minisoc_aes_key_exp_tb: PASS: 325 verificacoes, 0 erros
+                         Chronologic VCS (TM)
+       Version X-2025.06-SP2_Full64 -- Wed Nov 25 21:48:14 2026
+
+                    Copyright (c) 1991 - 2025 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_sbox.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_sbox.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_sub_bytes.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_shift_rows.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_mix_columns.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_add_round_key.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_sub_bytes.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_shift_rows.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_mix_columns.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_key_exp.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_dp.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_top.sv'
+Parsing design file 'rtl/minisoc_mem/minisoc_memory.sv'
+Parsing design file 'rtl/minisoc_pll/minisoc_pll_mock.sv'
+Parsing design file 'rtl/minisoc_spi/minisoc_spi.sv'
+Parsing design file 'tb/minisoc_aes_transforms_tb.sv'
+Parsing design file 'tb/minisoc_aes_key_exp_tb.sv'
+Parsing design file 'tb/minisoc_aes_dp_tb.sv'
+Parsing design file 'tb/minisoc_spi_pll_tb.sv'
+Parsing design file 'tb/minisoc_aes_top_tb.sv'
+Top Level Modules:
+       minisoc_aes_dp_tb
+No TimeScale specified
+Starting vcs inline pass...
+3 modules and 0 UDP read.
+	However, due to incremental compilation, no re-compilation is necessary.
+make[1]: Entering directory '/home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_dp_tb/csrc'
+make[1]: Leaving directory '/home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_dp_tb/csrc'
+make[1]: Entering directory '/home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_dp_tb/csrc'
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x /home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_dp_tb/simv ]; then chmod a-x /home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_dp_tb/simv; fi
+g++  -o /home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_dp_tb/simv      -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir -Wl,-rpath=/Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib -L/Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib  -Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o   _1804066_archive_1.so _prev_archive_1.so   SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o            -lvirsim -lerrorinf -lsnpsmalloc -lvfs      -lvcsnew -ldistsimclient -lsimprofile -luclinative /Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib/vcs_tls.o   -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive        _vcs_pli_stub_.o   /Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib/vcs_save_restore_new.o /Tools/synopsys/verdi/X-2025.06-SP2/share/PLI/VCS/LINUX64/pli.a -ldl  -lc -lm -lpthread -ldl 
+/home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_dp_tb/simv up to date
+make[1]: Leaving directory '/home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_dp_tb/csrc'
+CPU time: 1.266 seconds to compile + .558 seconds to elab + .707 seconds to link
+Verdi KDB elaboration done and the database successfully generated
+Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
+Please use '-no_save' simv switch to avoid re-execution or '-suppress=ASLR_DETECTED_INFO' to suppress this message.
+Chronologic VCS simulator copyright 1991-2025
+Contains Synopsys proprietary information.
+Compiler version X-2025.06-SP2_Full64; Runtime version X-2025.06-SP2_Full64;  Nov 25 21:48 2026
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside minisoc_aes_dp_tb.dut.u_key_exp.g_sub_word[0].u_sbox, at 
+  time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside minisoc_aes_dp_tb.dut.u_key_exp.g_sub_word[1].u_sbox, at 
+  time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside minisoc_aes_dp_tb.dut.u_key_exp.g_sub_word[2].u_sbox, at 
+  time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside minisoc_aes_dp_tb.dut.u_key_exp.g_sub_word[3].u_sbox, at 
+  time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_inv_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside 
+  minisoc_aes_dp_tb.dut.u_inv_sub_bytes.g_inv_sbox[0].u_inv_sbox, at time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_inv_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside 
+  minisoc_aes_dp_tb.dut.u_inv_sub_bytes.g_inv_sbox[1].u_inv_sbox, at time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_inv_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside 
+  minisoc_aes_dp_tb.dut.u_inv_sub_bytes.g_inv_sbox[2].u_inv_sbox, at time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_inv_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside 
+  minisoc_aes_dp_tb.dut.u_inv_sub_bytes.g_inv_sbox[3].u_inv_sbox, at time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_inv_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside 
+  minisoc_aes_dp_tb.dut.u_inv_sub_bytes.g_inv_sbox[4].u_inv_sbox, at time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_inv_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside 
+  minisoc_aes_dp_tb.dut.u_inv_sub_bytes.g_inv_sbox[5].u_inv_sbox, at time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_inv_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside 
+  minisoc_aes_dp_tb.dut.u_inv_sub_bytes.g_inv_sbox[6].u_inv_sbox, at time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_inv_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside 
+  minisoc_aes_dp_tb.dut.u_inv_sub_bytes.g_inv_sbox[7].u_inv_sbox, at time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_inv_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside 
+  minisoc_aes_dp_tb.dut.u_inv_sub_bytes.g_inv_sbox[8].u_inv_sbox, at time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_inv_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside 
+  minisoc_aes_dp_tb.dut.u_inv_sub_bytes.g_inv_sbox[9].u_inv_sbox, at time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_inv_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside 
+  minisoc_aes_dp_tb.dut.u_inv_sub_bytes.g_inv_sbox[10].u_inv_sbox, at time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_inv_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside 
+  minisoc_aes_dp_tb.dut.u_inv_sub_bytes.g_inv_sbox[11].u_inv_sbox, at time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_inv_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside 
+  minisoc_aes_dp_tb.dut.u_inv_sub_bytes.g_inv_sbox[12].u_inv_sbox, at time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_inv_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside 
+  minisoc_aes_dp_tb.dut.u_inv_sub_bytes.g_inv_sbox[13].u_inv_sbox, at time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_inv_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside 
+  minisoc_aes_dp_tb.dut.u_inv_sub_bytes.g_inv_sbox[14].u_inv_sbox, at time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_inv_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside 
+  minisoc_aes_dp_tb.dut.u_inv_sub_bytes.g_inv_sbox[15].u_inv_sbox, at time 0s.
+
+[INFO] (1) Estado apos o reset: 0 erro(s)
+[INFO] (2) 12 vetores, cifra e decifra (FIPS-197 e aleatorios): 0 erro(s)
+[INFO] (3) start_i sem chave pronta: 0 erro(s)
+[INFO] (4) start_i e key_load_i durante busy: 0 erro(s)
+[INFO] (5) Fluxo de 8 blocos seguidos: 0 erro(s)
+[INFO] (6) Reset no meio de uma operacao: 0 erro(s)
+--------------------------------------------------
+PASS: 563 verificacoes, 0 erros
+$finish called from file "tb/minisoc_aes_dp_tb.sv", line 324.
+$finish at simulation time                 6810
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 6810
+CPU Time:      0.470 seconds;       Data structure size:   0.0Mb
+Wed Nov 25 21:48:17 2026
+[sim] minisoc_aes_dp_tb: PASS: 563 verificacoes, 0 erros
+                         Chronologic VCS (TM)
+       Version X-2025.06-SP2_Full64 -- Wed Nov 25 21:48:19 2026
+
+                    Copyright (c) 1991 - 2025 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_sbox.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_sbox.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_sub_bytes.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_shift_rows.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_mix_columns.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_add_round_key.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_sub_bytes.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_shift_rows.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_mix_columns.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_key_exp.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_dp.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_top.sv'
+Parsing design file 'rtl/minisoc_mem/minisoc_memory.sv'
+Parsing design file 'rtl/minisoc_pll/minisoc_pll_mock.sv'
+Parsing design file 'rtl/minisoc_spi/minisoc_spi.sv'
+Parsing design file 'tb/minisoc_aes_transforms_tb.sv'
+Parsing design file 'tb/minisoc_aes_key_exp_tb.sv'
+Parsing design file 'tb/minisoc_aes_dp_tb.sv'
+Parsing design file 'tb/minisoc_spi_pll_tb.sv'
+Parsing design file 'tb/minisoc_aes_top_tb.sv'
+Top Level Modules:
+       minisoc_spi_pll_tb
+No TimeScale specified
+Starting vcs inline pass...
+1 module and 0 UDP read.
+	However, due to incremental compilation, no re-compilation is necessary.
+make[1]: Entering directory '/home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_spi_pll_tb/csrc'
+make[1]: Leaving directory '/home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_spi_pll_tb/csrc'
+make[1]: Entering directory '/home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_spi_pll_tb/csrc'
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x /home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_spi_pll_tb/simv ]; then chmod a-x /home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_spi_pll_tb/simv; fi
+g++  -o /home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_spi_pll_tb/simv      -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir -Wl,-rpath=/Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib -L/Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib  -Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o   _1805135_archive_1.so _prev_archive_1.so   SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o            -lvirsim -lerrorinf -lsnpsmalloc -lvfs      -lvcsnew -ldistsimclient -lsimprofile -luclinative /Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib/vcs_tls.o   -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive        _vcs_pli_stub_.o   /Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib/vcs_save_restore_new.o /Tools/synopsys/verdi/X-2025.06-SP2/share/PLI/VCS/LINUX64/pli.a -ldl  -lc -lm -lpthread -ldl 
+/home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_spi_pll_tb/simv up to date
+make[1]: Leaving directory '/home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_spi_pll_tb/csrc'
+CPU time: 1.177 seconds to compile + .581 seconds to elab + .682 seconds to link
+Verdi KDB elaboration done and the database successfully generated
+Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
+Please use '-no_save' simv switch to avoid re-execution or '-suppress=ASLR_DETECTED_INFO' to suppress this message.
+Chronologic VCS simulator copyright 1991-2025
+Contains Synopsys proprietary information.
+Compiler version X-2025.06-SP2_Full64; Runtime version X-2025.06-SP2_Full64;  Nov 25 21:48 2026
+[INFO] (1) Valores de reset (16 registradores e 3 enderecos nao mapeados): 0 erro(s)
+[INFO] (2) 13 registradores R/W, 3 padroes (escrita, leitura e saidas): 0 erro(s)
+[INFO] (3) Registradores somente leitura inalterados por escrita: 0 erro(s)
+[INFO] (4) START sem PLL_LOCKED e ignorado: 0 erro(s)
+[INFO] (5) PLL: 4 divisores, lock, clock, desabilitar, troca de divisor e START: 0 erro(s)
+[INFO] (6) Casos de borda do SPI: 0 erro(s)
+[INFO] (7) Reset no meio da operacao: 0 erro(s)
+--------------------------------------------------
+PASS: 393 verificacoes, 0 erros
+$finish called from file "tb/minisoc_spi_pll_tb.sv", line 470.
+$finish at simulation time              7668030
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 7668030
+CPU Time:      0.770 seconds;       Data structure size:   0.0Mb
+Wed Nov 25 21:48:22 2026
+[sim] minisoc_spi_pll_tb: PASS: 393 verificacoes, 0 erros
+                         Chronologic VCS (TM)
+       Version X-2025.06-SP2_Full64 -- Wed Nov 25 21:48:24 2026
+
+                    Copyright (c) 1991 - 2025 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_sbox.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_sbox.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_sub_bytes.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_shift_rows.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_mix_columns.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_add_round_key.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_sub_bytes.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_shift_rows.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_inv_mix_columns.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_key_exp.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_dp.sv'
+Parsing design file 'rtl/minisoc_aes/minisoc_aes_top.sv'
+Parsing design file 'rtl/minisoc_mem/minisoc_memory.sv'
+Parsing design file 'rtl/minisoc_pll/minisoc_pll_mock.sv'
+Parsing design file 'rtl/minisoc_spi/minisoc_spi.sv'
+Parsing design file 'tb/minisoc_aes_transforms_tb.sv'
+Parsing design file 'tb/minisoc_aes_key_exp_tb.sv'
+Parsing design file 'tb/minisoc_aes_dp_tb.sv'
+Parsing design file 'tb/minisoc_spi_pll_tb.sv'
+Parsing design file 'tb/minisoc_aes_top_tb.sv'
+Top Level Modules:
+       minisoc_aes_top_tb
+No TimeScale specified
+Starting vcs inline pass...
+4 modules and 0 UDP read.
+	However, due to incremental compilation, no re-compilation is necessary.
+make[1]: Entering directory '/home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_top_tb/csrc'
+make[1]: Leaving directory '/home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_top_tb/csrc'
+make[1]: Entering directory '/home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_top_tb/csrc'
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x /home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_top_tb/simv ]; then chmod a-x /home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_top_tb/simv; fi
+g++  -o /home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_top_tb/simv      -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir -Wl,-rpath=/Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib -L/Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib  -Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o   _1806260_archive_1.so _prev_archive_1.so   SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o            -lvirsim -lerrorinf -lsnpsmalloc -lvfs      -lvcsnew -ldistsimclient -lsimprofile -luclinative /Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib/vcs_tls.o   -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive        _vcs_pli_stub_.o   /Tools/synopsys/vcs/X-2025.06-SP2/linux64/lib/vcs_save_restore_new.o /Tools/synopsys/verdi/X-2025.06-SP2/share/PLI/VCS/LINUX64/pli.a -ldl  -lc -lm -lpthread -ldl 
+/home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_top_tb/simv up to date
+make[1]: Leaving directory '/home/luis.coutinho/Downloads/aes-6/aes-6/sim/minisoc_aes_top_tb/csrc'
+CPU time: 1.303 seconds to compile + .572 seconds to elab + .695 seconds to link
+Verdi KDB elaboration done and the database successfully generated
+Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
+Please use '-no_save' simv switch to avoid re-execution or '-suppress=ASLR_DETECTED_INFO' to suppress this message.
+Chronologic VCS simulator copyright 1991-2025
+Contains Synopsys proprietary information.
+Compiler version X-2025.06-SP2_Full64; Runtime version X-2025.06-SP2_Full64;  Nov 25 21:48 2026
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside 
+  minisoc_aes_top_tb.dut_aes.u_core.u_key_exp.g_sub_word[0].u_sbox, at time 
+  0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside 
+  minisoc_aes_top_tb.dut_aes.u_core.u_key_exp.g_sub_word[1].u_sbox, at time 
+  0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside 
+  minisoc_aes_top_tb.dut_aes.u_core.u_key_exp.g_sub_word[2].u_sbox, at time 
+  0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside 
+  minisoc_aes_top_tb.dut_aes.u_core.u_key_exp.g_sub_word[3].u_sbox, at time 
+  0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_inv_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside 
+  minisoc_aes_top_tb.dut_aes.u_core.u_inv_sub_bytes.g_inv_sbox[0].u_inv_sbox, 
+  at time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_inv_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside 
+  minisoc_aes_top_tb.dut_aes.u_core.u_inv_sub_bytes.g_inv_sbox[1].u_inv_sbox, 
+  at time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_inv_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside 
+  minisoc_aes_top_tb.dut_aes.u_core.u_inv_sub_bytes.g_inv_sbox[2].u_inv_sbox, 
+  at time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_inv_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside 
+  minisoc_aes_top_tb.dut_aes.u_core.u_inv_sub_bytes.g_inv_sbox[3].u_inv_sbox, 
+  at time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_inv_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside 
+  minisoc_aes_top_tb.dut_aes.u_core.u_inv_sub_bytes.g_inv_sbox[4].u_inv_sbox, 
+  at time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_inv_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside 
+  minisoc_aes_top_tb.dut_aes.u_core.u_inv_sub_bytes.g_inv_sbox[5].u_inv_sbox, 
+  at time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_inv_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside 
+  minisoc_aes_top_tb.dut_aes.u_core.u_inv_sub_bytes.g_inv_sbox[6].u_inv_sbox, 
+  at time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_inv_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside 
+  minisoc_aes_top_tb.dut_aes.u_core.u_inv_sub_bytes.g_inv_sbox[7].u_inv_sbox, 
+  at time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_inv_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside 
+  minisoc_aes_top_tb.dut_aes.u_core.u_inv_sub_bytes.g_inv_sbox[8].u_inv_sbox, 
+  at time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_inv_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside 
+  minisoc_aes_top_tb.dut_aes.u_core.u_inv_sub_bytes.g_inv_sbox[9].u_inv_sbox, 
+  at time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_inv_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside 
+  minisoc_aes_top_tb.dut_aes.u_core.u_inv_sub_bytes.g_inv_sbox[10].u_inv_sbox,
+  at time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_inv_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside 
+  minisoc_aes_top_tb.dut_aes.u_core.u_inv_sub_bytes.g_inv_sbox[11].u_inv_sbox,
+  at time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_inv_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside 
+  minisoc_aes_top_tb.dut_aes.u_core.u_inv_sub_bytes.g_inv_sbox[12].u_inv_sbox,
+  at time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_inv_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside 
+  minisoc_aes_top_tb.dut_aes.u_core.u_inv_sub_bytes.g_inv_sbox[13].u_inv_sbox,
+  at time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_inv_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside 
+  minisoc_aes_top_tb.dut_aes.u_core.u_inv_sub_bytes.g_inv_sbox[14].u_inv_sbox,
+  at time 0s.
+
+
+Warning-[RT-NCMUCS] No condition matches in statement
+rtl/minisoc_aes/minisoc_aes_inv_sbox.sv, 7
+  No condition matches in 'unique case' statement. 'default' specification is 
+  missing, inside 
+  minisoc_aes_top_tb.dut_aes.u_core.u_inv_sub_bytes.g_inv_sbox[15].u_inv_sbox,
+  at time 0s.
+
+[INFO] (1) Estado apos o reset: 0 erro(s)
+[INFO] (2) ECB, CBC e CTR, cifra e decifra, 1/2/256 blocos (18 casos): 0 erro(s)
+[INFO] (3) Configuracao invalida (NUM_BLOCKS 0 e 257, MODE 6 e 7): 0 erro(s)
+[INFO] (4) Modos nao implementados (PCBC, CFB, OFB) geram ERROR: 0 erro(s)
+[INFO] (5)+(6) DONE/ERROR sticky, novo START e START/configuracao durante BUSY: 0 erro(s)
+[INFO] (7) Operacoes em sequencia sem reset: 0 erro(s)
+[INFO] (8) Reset no meio de uma operacao: 0 erro(s)
+--------------------------------------------------
+PASS: 33041 verificacoes, 0 erros
+$finish called from file "tb/minisoc_aes_top_tb.sv", line 417.
+$finish at simulation time              1662390
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 1662390
+CPU Time:      1.050 seconds;       Data structure size:   0.1Mb
+Wed Nov 25 21:48:28 2026
+[sim] minisoc_aes_top_tb: PASS: 33041 verificacoes, 0 erros
+[make] OK: lint, compilacao e simulacao concluidos com PASS em: minisoc_aes_transforms_tb minisoc_aes_key_exp_tb minisoc_aes_dp_tb minisoc_spi_pll_tb minisoc_aes_top_tb
