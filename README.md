@@ -17,7 +17,7 @@ This project is part of the Brazilian microelectronics training program CI Exper
 │   ├── minisoc_mem/     # minisoc_memory
 │   ├── minisoc_pll/     # minisoc_pll_mock
 │   ├── minisoc_spi/     # minisoc_spi
-│   └── minisoc_top.sv
+│   └── minisoc_top.sv   # top module
 ├── models/              # Simple PLL and memory models
 ├── tb/                  # Testbenches
 ├── formal/              # Formality scripts and reports
