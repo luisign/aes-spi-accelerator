@@ -12,7 +12,7 @@ FILELIST = scripts/arquivos.f
 # make TOPS=minisoc_aes_dp_tb
 # make sim_minisoc_aes_key_exp_tb (um unico testbench: lint_<tb>, compile_<tb>, sim_<tb>)
 
-TOPS ?= minisoc_aes_transforms_tb minisoc_aes_key_exp_tb minisoc_aes_dp_tb minisoc_spi_pll_tb
+TOPS ?= minisoc_aes_transforms_tb minisoc_aes_key_exp_tb minisoc_aes_dp_tb minisoc_spi_pll_tb minisoc_aes_top_tb
 
 # Flags de compilacao:
 VCS_FLAGS = -full64 -sverilog -kdb -debug_access+all -f $(FILELIST)
