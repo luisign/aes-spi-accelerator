@@ -35,6 +35,13 @@ O acesso à memória pela *engine* AES ocorre da seguinte forma: para cada bloco
 
 Por falar no modo **CBC**, os modos implementados na *engine* AES são **ECB** (`MODE = 000`), **CBC** (`001`) e **CTR** (`101`), cifrando e decifrando.
 
+| Modo | Entrada do núcleo | Saída | Atualização |
+|---|---|---|---|
+| **ECB** | bloco | núcleo | Não tem |
+| **CBC** cifra | bloco ^ `chain` | núcleo | `chain` = saída |
+| **CBC** decifra | bloco | núcleo ^ `chain` | `chain` = bloco lido |
+| **CTR** | `IV ^ {64'b0, contador}` | bloco ^ núcleo | contador + 1 (64 bits) |
+
 ## 5. Modelo de referência (`scripts/gen_vectors.py`)
 
 O _script_ implementa em Python o AES-128 da FIPS-197 e os modos **ECB**, **CBC** e **CTR**, e gera os vetores esperados para 1, 2 e 256 blocos em cada modo e sentido (18 casos), mais 4 casos de configuração inválida. O modelo realiza sua autochecagem a cada execução com os vetores da FIPS-197, da NIST SP 800-38A (**ECB** e **CBC** com AES-128 e o primeiro bloco do CTR).
@@ -80,4 +87,4 @@ O _lint_ não deu nenhum erro e nenhum aviso no projeto, inclusive nos dois mód
 
 ## 8. Limitações
 
-A principal limitação é a implementação dos modos **PCBC**, **CFB** e **OFB**, que não foram implementados. Estão previstos para a semana 10. Nesta versão eles geram `ERROR` em vez de processar de forma incorreta. Isso desvia da especificação do _Block Guide_, que lista esses modos como válidos.
+A principal limitação é a implementação dos modos **PCBC**, **CFB** e **OFB**, que não foram implementados. Estão previstos para a semana 10. Nesta versão eles geram `ERROR` em vez de processar de forma incorreta. Isso desvia da especificação do _Block Guide_, que lista esses modos como válidos. Outra limitação é que a troca de `MEM_SEL_AES` para `0` ou para `1` depende de os dois _clocks_ estarem rodando e de o sinal ficar estável por cerca de 10 ciclos do _clock_ mais lento.
